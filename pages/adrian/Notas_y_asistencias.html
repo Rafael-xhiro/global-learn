@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas y Asistencia | Global Learn+</title>
+  <link rel="stylesheet" href="../../css/adrian/notasyasistencias.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Global Learn<span style="color: var(--color-primary);">+</span></div>
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">Mis Cursos</a>
+      <a href="#">Perfil</a>
+      <a href="#" class="btn">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="notas">
+      <h2>Resumen de Notas</h2>
+      <div class="parciales">
+        <div class="parcial">
+          <h3>Parcial 1</h3>
+          <p><strong>Promedio:</strong> 14</p>
+          <p><small>Fórmula: 0.30*PC + 0.40*INF + 0.30*EP</small></p>
+        </div>
+        <div class="parcial">
+          <h3>Parcial 2</h3>
+          <p><strong>Promedio:</strong> 16</p>
+          <p><small>Fórmula: 0.30*PC + 0.40*INF + 0.30*EP</small></p>
+        </div>
+        <div class="parcial">
+          <h3>Parcial 3</h3>
+          <p><strong>Promedio:</strong> 18</p>
+          <p><small>Fórmula: 0.30*PC + 0.40*INF + 0.30*EF</small></p>
+        </div>
+      </div>
+
+  <div class="promedio-final">
+    <h3>Promedio Final</h3>
+    <p class="nota-final">16</p>
+    <canvas id="graficoNotas"></canvas>
+  </div>
+</section>
+
+<section class="asistencias">
+  <h2>Control de Asistencia</h2>
+  <div class="asistencia-detalle">
+    <p><strong>Asistencias:</strong> 40</p>
+    <p><strong>Faltas:</strong> 3</p>
+    <p><strong>Tardanzas:</strong> 2</p>
+  </div>
+  <canvas id="graficoAsistencia"></canvas>
+</section>
+
+  </main>
+
+  <script>
+    // Gráfico de Notas
+    new Chart(document.getElementById("graficoNotas"), {
+      type: 'bar',
+      data: {
+        labels: ["Parcial 1", "Parcial 2", "Parcial 3"],
+        datasets: [{
+          label: "Promedios",
+          data: [14, 16, 18],
+          backgroundColor: ["#00ffa6", "#00b3ff", "#ffcc00"]
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { color: "#ccc" } },
+          x: { ticks: { color: "#ccc" } }
+        }
+      }
+    });
+
+    // Gráfico de Asistencia
+    new Chart(document.getElementById("graficoAsistencia"), {
+      type: 'doughnut',
+      data: {
+        labels: ["Asistencias", "Faltas", "Tardanzas"],
+        datasets: [{
+          data: [40, 3, 2],
+          backgroundColor: ["#00ffa6", "#ff4444", "#ffaa00"]
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: { color: "#ccc" }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

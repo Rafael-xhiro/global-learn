@@ -1,0 +1,192 @@
+/* ===========================
+   GLOBAL LEARN - LOGIN STYLE
+   =========================== */
+
+/* --- Reset general --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Fondo general --- */
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Encabezado --- */
+header {
+    background: rgba(15, 15, 15, 0.95);
+    border-bottom: 1px solid #1f1f1f;
+    padding: 15px 0;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.1);
+}
+
+.header-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #00cc88;
+    font-weight: 600;
+}
+
+.logo-icon {
+    margin-right: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00cc88;
+}
+
+.login-btn {
+    background-color: #00cc88;
+    color: #0d0d0d;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #00b377;
+}
+
+/* --- Contenido principal --- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.login-section {
+    background: #141414;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 204, 136, 0.15);
+    text-align: center;
+}
+
+.login-section h2 {
+    color: #00cc88;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* --- Formularios --- */
+.form-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    color: #bdbdbd;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #00cc88;
+}
+
+/* --- Opciones de recordar --- */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    color: #00cc88;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* --- Botón principal --- */
+button[type="submit"] {
+    background-color: #00cc88;
+    color: #0d0d0d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00b377;
+}
+
+/* --- Enlace de registro --- */
+.register-link {
+    margin-top: 20px;
+    color: #bdbdbd;
+}
+
+.register-link a {
+    color: #00cc88;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0b0b0b;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #1f1f1f;
+    font-size: 0.85rem;
+    color: #888;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - Global Learn</title>
+    <link rel="stylesheet" href="../../css/rafael/pagos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c2a59b4e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header-pagos d-flex justify-content-between align-items-center px-5 py-3">
+        <h1 class="logo">Global Learn</h1>
+        <a href="index.html" class="btn-volver">Volver al inicio</a>
+    </header>
+
+    <!-- HERO / BANNER -->
+    <section class="banner-pagos">
+        <div class="icono-pago text-success"><i class="fa-solid fa-credit-card"></i></div>
+        <h2 class="titulo-pagos">Centro de Pagos</h2>
+        <p class="descripcion-pagos">Administra tus métodos de pago, revisa tu historial de transacciones y mantén tus estudios al día.</p>
+    </section>
+
+    <!-- MÉTODOS DE PAGO -->
+    <section class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-metodo p-4 text-center">
+                    <div class="icono-metodo"><i class="fa-brands fa-cc-visa"></i></div>
+                    <h3 class="titulo-metodo">Tarjeta de Crédito</h3>
+                    <p class="texto-metodo">Aceptamos todas las tarjetas VISA, MasterCard y American Express.</p>
+                    <ul class="lista-metodo">
+                        <li>• Pagos inmediatos</li>
+                        <li>• Sin comisiones</li>
+                    </ul>
+                    <button class="btn-seleccionar">Seleccionar</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-metodo p-4 text-center position-relative">
+                    <div class="badge-popular">Recomendado</div>
+                    <div class="icono-metodo"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3 class="titulo-metodo">Transferencia Bancaria</h3>
+                    <p class="texto-metodo">Realiza tu pago directamente desde tu banco.</p>
+                    <ul class="lista-metodo">
+                        <li>• Sin límite de monto</li>
+                        <li>• Confirmación en minutos</li>
+                    </ul>
+                    <button class="btn-seleccionar btn-destacado">Seleccionar</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-metodo p-4 text-center">
+                    <div class="icono-metodo"><i class="fa-solid fa-qrcode"></i></div>
+                    <h3 class="titulo-metodo">Pago QR</h3>
+                    <p class="texto-metodo">Escanea el código QR desde Yape o Plin.</p>
+                    <ul class="lista-metodo">
+                        <li>• Rápido y seguro</li>
+                        <li>• Compatible con apps locales</li>
+                    </ul>
+                    <button class="btn-seleccionar">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN DE PAGOS -->
+    <section class="container my-5">
+        <h3 class="text-center text-light mb-4">Resumen de tus pagos</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-resumen p-4">
+                    <div class="icono-resumen text-success"><i class="fa-solid fa-check-circle"></i></div>
+                    <p class="texto-resumen">Pagos completados</p>
+                    <p class="valor-resumen">8</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-resumen card-proximo p-4">
+                    <div class="icono-resumen text-warning"><i class="fa-solid fa-clock"></i></div>
+                    <p class="texto-resumen">Pago pendiente</p>
+                    <p class="valor-resumen-small">1 pendiente</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-resumen p-4">
+                    <div class="icono-resumen text-info"><i class="fa-solid fa-money-bill-wave"></i></div>
+                    <p class="texto-resumen">Monto total abonado</p>
+                    <p class="valor-resumen">S/ 850.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIAL DE PAGOS -->
+    <section class="container my-5">
+        <div class="card-historial p-4">
+            <h3 class="text-light mb-4">Historial de Pagos</h3>
+            <div class="table-responsive">
+                <table class="tabla-pagos w-100">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Método</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/10/2025</td>
+                            <td>Visa</td>
+                            <td>S/ 300.00</td>
+                            <td><span class="badge-estado estado-aprobado">Aprobado</span></td>
+                            <td><button class="btn-accion">Ver recibo</button></td>
+                        </tr>
+                        <tr>
+                            <td>15/09/2025</td>
+                            <td>Transferencia</td>
+                            <td>S/ 250.00</td>
+                            <td><span class="badge-estado estado-aprobado">Aprobado</span></td>
+                            <td><button class="btn-accion">Ver recibo</button></td>
+                        </tr>
+                        <tr>
+                            <td>05/10/2025</td>
+                            <td>Yape</td>
+                            <td>S/ 300.00</td>
+                            <td><span class="badge-estado estado-pendiente">Pendiente</span></td>
+                            <td><button class="btn-accion">Ver detalle</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer text-center py-4">
+        <p>© 2025 Global Learn - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

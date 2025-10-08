@@ -1,0 +1,95 @@
+:root {
+  --verde-neon: #00ff99;
+  --verde-oscuro: #00cc77;
+  --negro: #0a0e27;
+  --negro-claro: #1a1f3a;
+  --gris-oscuro: #2d3348;
+  --blanco: #ffffff;
+  --texto-gris: #b8c1d9;
+}
+
+body {
+  background-color: var(--negro);
+  color: var(--texto-gris);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.header-principal {
+  background-color: var(--negro-claro);
+  border-bottom: 2px solid var(--verde-neon);
+}
+.logo {
+  color: var(--verde-neon);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.btn-volver {
+  color: var(--blanco);
+  background: var(--verde-oscuro);
+  border-radius: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-volver:hover {
+  background: var(--verde-neon);
+  color: var(--negro);
+}
+
+/* BANNER */
+.banner-ruta {
+  background: radial-gradient(circle at top, #00ff99 0%, #0a0e27 70%);
+  color: var(--blanco);
+  border-bottom: 2px solid var(--verde-neon);
+}
+.badge-ruta {
+  background: var(--verde-oscuro);
+  color: var(--negro);
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* TARJETAS */
+.card {
+  background: var(--gris-oscuro);
+  border-radius: 15px;
+  color: var(--blanco);
+}
+.card-curso h5 {
+  color: var(--verde-neon);
+  font-weight: 600;
+}
+
+/* BOTONES */
+.btn-matricula {
+  background: var(--verde-neon);
+  color: var(--negro);
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-matricula:hover {
+  background: var(--blanco);
+  color: var(--negro);
+}
+
+/* PROFESORES */
+.profesor {
+  background: var(--negro-claro);
+  color: var(--verde-neon);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--verde-neon);
+  font-weight: 500;
+}
+
+/* FOOTER */
+.footer-principal {
+  background-color: var(--negro-claro);
+  border-top: 2px solid var(--verde-neon);
+  color: var(--texto-gris);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curso de Inglés e Informática para Niños</title>
+  <link rel="stylesheet" href="../../css/andriu/cursos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt=""> Inicio</li>
+      <li><img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt=""> Comentarios</li>
+      <li><img src="https://cdn-icons-png.flaticon.com/512/2989/2989988.png" alt=""> Mis Rutas</li>
+      <li><img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt=""> Mi Progreso</li>
+      <li><img src="https://cdn-icons-png.flaticon.com/512/4727/4727496.png" alt=""> Mis Certificados</li>
+      <li><img src="https://cdn-icons-png.flaticon.com/512/1827/1827349.png" alt=""> Notificaciones</li>
+    </ul>
+  </nav>
+
+  <div class="content-container">
+
+    <main>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar contenido...">
+        <button id="searchBtn" aria-label="Buscar"><i class="fa fa-search"></i></button>
+      </div>
+
+      <h1>Curso de Inglés e Informática para Niños</h1>
+
+      <p class="descripcion">
+        Aprende inglés y computación de forma divertida. Este curso está diseñado especialmente para niños de primaria y
+        secundaria,
+        combinando vocabulario en inglés con actividades básicas de informática, herramientas digitales y juegos
+        educativos.
+      </p>
+
+      <div class="rating" aria-label="Califica este curso">
+        <p>Califica este curso:</p>
+        <div class="stars" role="radiogroup" aria-label="Valoración de estrellas">
+          <button class="star" data-value="1" aria-label="1 estrella"><i class="fa fa-star"></i></button>
+          <button class="star" data-value="2" aria-label="2 estrellas"><i class="fa fa-star"></i></button>
+          <button class="star" data-value="3" aria-label="3 estrellas"><i class="fa fa-star"></i></button>
+          <button class="star" data-value="4" aria-label="4 estrellas"><i class="fa fa-star"></i></button>
+          <button class="star" data-value="5" aria-label="5 estrellas"><i class="fa fa-star"></i></button>
+        </div>
+        <div id="ratingMsg" class="rating-msg" aria-live="polite"></div>
+      </div>
+
+      <h2>Clases</h2>
+
+      <section class="lista-clases">
+        <div class="clase"><span class="num">1.</span> Saludos y presentaciones en inglés</div>
+        <div class="clase"><span class="num">2.</span> Partes de la computadora (en inglés)</div>
+        <div class="clase"><span class="num">3.</span> Escribir y dibujar con Paint y Word</div>
+        <div class="clase"><span class="num">4.</span> Vocabulario digital: teclado, ratón y pantalla</div>
+        <div class="clase"><span class="num">5.</span> Juegos sencillos y comandos básicos</div>
+        <div class="clase"><span class="num">6.</span> Seguridad básica en Internet</div>
+        <div class="clase"><span class="num">7.</span> Crear una presentación en inglés</div>
+        <div class="clase"><span class="num">8.</span> Proyecto final: mi mini presentación interactiva</div>
+      </section>
+    </main>
+
+    <aside>
+      <div class="container">
+        <header class="header">
+          <div class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h1>Instituto Global Learning</h1>
+          </div>
+        </header>
+      </div>
+
+      <div class="panel-lateral">
+        <img
+          src="https://st5.depositphotos.com/2102215/65346/v/1600/depositphotos_653463800-stock-illustration-graduate-class-template-logo-laurel.jpg"
+          alt="Certificado del curso" class="cert-img">
+        <button class="btn-cert">Sacar certificado</button>
+
+        <div class="exam-icon">
+          <i class="fa-solid fa-file-pen"></i>
+        </div>
+        <button class="btn-exam">Ir al examen</button>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = 'curso-ingles-rating';
+      const stars = document.querySelectorAll('.star');
+      const msg = document.getElementById('ratingMsg');
+      const saved = parseInt(localStorage.getItem(STORAGE_KEY)) || 0;
+      if (saved) highlightStars(saved);
+
+      stars.forEach(star => {
+        star.addEventListener('click', () => {
+          const val = parseInt(star.dataset.value);
+          localStorage.setItem(STORAGE_KEY, val);
+          highlightStars(val);
+          msg.textContent = `Has dado ${val} ${val === 1 ? 'estrella' : 'estrellas'}.`;
+        });
+      });
+
+      function highlightStars(count) {
+        stars.forEach(s => s.classList.toggle('active', parseInt(s.dataset.value) <= count));
+      }
+    })();
+  </script>
+</body>
+
+</html>

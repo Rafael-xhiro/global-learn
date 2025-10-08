@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Introducción a la Web</title>
+    <link rel="stylesheet" href="../../css/adrian/videoclase.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="logo">videoclase<span style="color: var(--color-primary);">+</span></div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Cursos</a>
+            <a href="#">Mi Perfil</a>
+            <a href="#" class="btn">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="course-container">
+    <!-- Video + descripción -->
+    <section class="course-content">
+        <div class="video-wrapper">
+            <video controls poster="practica.png">
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div class="course-info">
+            <h1>Curso de Introducción a la Web</h1>
+            <p class="instructor">Instructor: <strong>Diego de Granda</strong></p>
+            <p class="description">
+                Aprende los fundamentos del Internet, cómo funciona la web, y los componentes esenciales que 
+                permiten que los sitios y aplicaciones estén disponibles en todo el mundo.
+            </p>
+            <button class="btn-primary">Continuar Curso</button>
+        </div>
+    </section>
+
+    <!-- Contenido del curso -->
+    <section class="lesson-section">
+        <h2>¿Qué aprenderás en este curso?</h2>
+        <p>
+            Bienvenido al apasionante mundo de la web y el Internet. En este curso aprenderás la historia del Internet
+            desde sus orígenes hasta las tecnologías modernas que lo hacen posible.
+        </p>
+        <p>
+            Comprenderás los fundamentos que permiten que los sitios web funcionen, cómo se conectan los dispositivos 
+            y cómo la información viaja por la red.
+        </p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>¿De dónde proviene el Internet?</h2>
+        <p>
+            Internet ha evolucionado a través de una serie de hitos y tecnologías. Conoceremos los primeros
+            experimentos, las redes que dieron origen al Internet moderno y cómo este ha cambiado la forma en que nos
+            comunicamos, trabajamos y aprendemos.
+        </p>
+    </section>
+</main>
+
+<!-- ===== COMMENTS PANEL ===== -->
+<aside class="comments-panel" aria-label="Panel de comentarios">
+    <div class="comments-header">
+        <h3>Comentarios</h3>
+        <button class="comments-close" title="Cerrar" aria-label="Cerrar">×</button>
+    </div>
+
+    <div class="comments-list">
+        <article class="comment">
+            <div class="avatar">SD</div>
+            <div class="comment-body">
+                <div class="comment-meta"><strong>Sebastián</strong> <small>· 2h</small></div>
+                <p>Muy buen curso, me está ayudando mucho.</p>
+            </div>
+        </article>
+
+        <article class="comment">
+            <div class="avatar">OC</div>
+            <div class="comment-body">
+                <div class="comment-meta"><strong>Oscar</strong> <small>· 1d</small></div>
+                <p>¿Dónde puedo descargar los apuntes?</p>
+            </div>
+        </article>
+
+        <article class="comment">
+            <div class="avatar">MB</div>
+            <div class="comment-body">
+                <div class="comment-meta"><strong>María</strong> <small>· 3d</small></div>
+                <p>Excelente explicación sobre los orígenes de Internet.</p>
+            </div>
+        </article>
+    </div>
+
+    <div class="comment-input">
+        <textarea placeholder="Escribe un comentario..." rows="2" aria-label="Escribe un comentario"></textarea>
+        <button type="button">Enviar</button>
+    </div>
+</aside>
+```
+
+</body>
+</html>

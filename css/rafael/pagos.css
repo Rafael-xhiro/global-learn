@@ -1,0 +1,332 @@
+/* ========== ESTILOS PARA PÁGINA DE PAGOS - GLOBAL LEARN ========== */
+/* Autor: Rafael Cuipal Orihuela */
+
+/* ========== VARIABLES DE COLORES ========== */
+:root {
+    --verde-neon: #00FF85;
+    --verde-oscuro: #00CC6A;
+    --negro: #0A0E27;
+    --negro-claro: #1A1F3A;
+    --gris-oscuro: #2D3348;
+    --gris-medio: #20263E;
+    --blanco: #FFFFFF;
+    --texto-gris: #b8c1b8;
+    --amarillo: #FFD700;
+    --rojo: #FF4444;
+}
+
+/* ========== BASE ========== */
+body {
+    background: linear-gradient(180deg, var(--negro) 0%, #0F1629 50%, var(--negro-claro) 100%);
+    font-family: 'Poppins', sans-serif;
+    color: var(--blanco);
+    min-height: 100vh;
+}
+
+/* Botón volver */
+.btn-volver {
+    color: var(--verde-neon);
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--verde-neon);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.btn-volver:hover {
+    background: var(--verde-neon);
+    color: var(--negro);
+}
+
+/* ========== HEADER ========== */
+.header-pagos {
+    background: linear-gradient(135deg, var(--negro), var(--negro-claro));
+    border-bottom: 2px solid var(--verde-neon);
+    box-shadow: 0 4px 20px rgba(0, 255, 133, 0.2);
+}
+.logo {
+    font-size: 1.5rem;
+    color: var(--verde-neon);
+    font-weight: 700;
+}
+
+/* ========== BANNER DE PAGOS ========== */
+.banner-pagos {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.icono-pago {
+    font-size: 4rem;
+    animation: flotar 3s ease-in-out infinite;
+}
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.titulo-pagos {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--blanco);
+    text-shadow: 0 0 20px rgba(0, 255, 133, 0.3);
+}
+.descripcion-pagos {
+    color: var(--texto-gris);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========== MÉTODOS DE PAGO ========== */
+.card-metodo {
+    background: linear-gradient(135deg, var(--negro-claro), var(--gris-oscuro));
+    border: 2px solid var(--gris-oscuro);
+    border-radius: 20px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.card-metodo::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,255,133,0.1), transparent);
+    transition: left 0.5s;
+}
+.card-metodo:hover::before { left: 100%; }
+.card-metodo:hover {
+    border-color: var(--verde-neon);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 255, 133, 0.3);
+}
+.card-destacada {
+    border: 3px solid var(--verde-neon);
+    box-shadow: 0 10px 30px rgba(0, 255, 133, 0.2);
+}
+.badge-popular {
+    position: absolute;
+    top: 15px; right: -30px;
+    background: linear-gradient(135deg, var(--verde-neon), var(--verde-oscuro));
+    color: var(--negro);
+    padding: 0.5rem 2.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 10px rgba(0, 255, 133, 0.4);
+}
+.icono-metodo { font-size: 3rem; }
+.titulo-metodo { color: var(--blanco); font-weight: 700; }
+.texto-metodo { color: var(--texto-gris); }
+.lista-metodo { list-style: none; padding: 0; margin: 1rem 0; }
+.lista-metodo li { color: var(--texto-gris); font-size: 0.95rem; }
+
+.btn-seleccionar {
+    background: transparent;
+    border: 2px solid var(--verde-neon);
+    color: var(--verde-neon);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    width: 100%;
+}
+.btn-seleccionar:hover {
+    background: var(--verde-neon);
+    color: var(--negro);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,133,0.5);
+}
+.btn-destacado {
+    background: linear-gradient(135deg, var(--verde-neon), var(--verde-oscuro));
+    color: var(--negro);
+    border: none;
+}
+.btn-destacado:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,255,133,0.6);
+}
+
+/* ========== HISTORIAL DE PAGOS (MODIFICADO) ========== */
+.card-historial {
+    background: var(--gris-medio);
+    border: 2px solid var(--gris-oscuro);
+    border-radius: 15px;
+    color: var(--blanco);
+    box-shadow: 0 10px 25px rgba(0, 255, 133, 0.05);
+}
+.tabla-pagos { 
+    color: var(--texto-gris);
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabla-pagos thead {
+    background: var(--gris-oscuro);
+}
+.tabla-pagos th {
+    color: var(--verde-neon);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    padding: 1rem;
+}
+.tabla-pagos td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+.tabla-pagos tbody tr:hover {
+    background: rgba(0,255,133,0.08);
+}
+.badge-estado {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+.estado-aprobado {
+    background: rgba(0,255,133,0.15);
+    color: var(--verde-neon);
+    border: 1px solid var(--verde-neon);
+}
+.estado-pendiente {
+    background: rgba(255,215,0,0.15);
+    color: var(--amarillo);
+    border: 1px solid var(--amarillo);
+}
+.btn-accion {
+    background: transparent;
+    border: 1px solid var(--gris-oscuro);
+    color: var(--texto-gris);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: all 0.3s;
+}
+.btn-accion:hover {
+    border-color: var(--verde-neon);
+    color: var(--verde-neon);
+}
+
+/* ========== RESUMEN DE CUENTA ========== */
+.card-resumen {
+    background: linear-gradient(135deg, var(--negro-claro), var(--gris-oscuro));
+    border: 2px solid var(--gris-oscuro);
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+.card-resumen:hover {
+    border-color: var(--verde-neon);
+    box-shadow: 0 10px 30px rgba(0,255,133,0.2);
+}
+.card-proximo {
+    border-color: var(--amarillo);
+}
+.card-proximo:hover {
+    box-shadow: 0 10px 30px rgba(255,215,0,0.2);
+}
+.icono-resumen { font-size: 2.5rem; }
+.card-resumen h5 { color: var(--texto-gris); font-weight: 600; }
+.valor-resumen {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--verde-neon), var(--verde-oscuro));
+    -webkit-text-fill-color: transparent;
+}
+.valor-resumen-small {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--amarillo);
+}
+.fecha-proximo { color: var(--texto-gris); }
+
+/* ========== MODALES ========== */
+.modal-custom {
+    background: linear-gradient(135deg, var(--negro-claro), var(--gris-oscuro));
+    border: 2px solid var(--verde-neon);
+    border-radius: 20px;
+    color: var(--blanco);
+}
+.modal-custom .modal-title {
+    color: var(--verde-neon);
+    font-weight: 700;
+}
+.modal-custom .form-control {
+    background: var(--negro);
+    border: 2px solid var(--gris-oscuro);
+    color: var(--blanco);
+    border-radius: 10px;
+}
+.modal-custom .form-control:focus {
+    border-color: var(--verde-neon);
+    box-shadow: 0 0 15px rgba(0,255,133,0.3);
+}
+.total-pagar {
+    background: rgba(0,255,133,0.1);
+    border: 1px solid var(--verde-neon);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total-pagar span { color: var(--texto-gris); }
+.total-pagar strong { color: var(--verde-neon); font-size: 1.3rem; }
+
+.btn-pagar {
+    background: linear-gradient(135deg, var(--verde-neon), var(--verde-oscuro));
+    color: var(--negro);
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+}
+.btn-pagar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,255,133,0.6);
+}
+
+/* QR */
+.qr-placeholder {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: var(--negro);
+    border: 3px dashed var(--verde-neon);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--texto-gris);
+    flex-direction: column;
+}
+
+/* Datos bancarios */
+.datos-bancarios {
+    background: var(--negro);
+    border: 2px solid var(--gris-oscuro);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.dato-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gris-oscuro);
+    padding: 0.75rem 0;
+}
+.dato-label { color: var(--texto-gris); font-weight: 600; }
+.dato-valor { color: var(--verde-neon); font-weight: 700; }
+.btn-copiar-small {
+    background: var(--verde-neon);
+    color: var(--negro);
+    border: none;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-copiar-small:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,255,133,0.4);
+}

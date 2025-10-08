@@ -1,0 +1,299 @@
+/* ===========================
+   Estilo general del registro
+=========================== */
+body {
+    background-color: #0b0b0b;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Encabezado ===== */
+header {
+    background-color: #111;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 15px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0ff0a0;
+}
+
+.logo-subtitle {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0ff0a0;
+}
+
+.login-btn {
+    background-color: #0ff0a0;
+    color: #0b0b0b;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    background-color: #0cd58a;
+}
+
+/* ===== Sección de Registro ===== */
+.register-section {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 150, 0.15);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-header h2 {
+    color: #0ff0a0;
+    font-size: 1.9rem;
+}
+
+.register-header p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+/* ===== Formulario ===== */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-section h3 {
+    color: #0ff0a0;
+    border-bottom: 1px solid #1f1f1f;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+label {
+    color: #ccc;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+input, select {
+    background-color: #0e0e0e;
+    color: #e0e0e0;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #0ff0a0;
+    box-shadow: 0 0 5px rgba(0, 255, 150, 0.4);
+    outline: none;
+}
+
+/* Select estilizado */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='8'><polygon points='0,0 10,0 5,8' fill='%230ff0a0'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+}
+
+/* Checkboxes y términos */
+.form-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+    accent-color: #0ff0a0;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.checkbox-container a {
+    color: #0ff0a0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.checkbox-container a:hover {
+    color: #0cd58a;
+    text-decoration: underline;
+}
+
+/* Botón principal */
+.register-btn {
+    background-color: #0ff0a0;
+    color: #0b0b0b;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.register-btn:hover {
+    background-color: #0cd58a;
+    transform: scale(1.02);
+}
+
+/* Enlace inferior */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.login-link a {
+    color: #0ff0a0;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    color: #0cd58a;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #111;
+    border-top: 1px solid #1a1a1a;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    color: #999;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h4 {
+    color: #0ff0a0;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+footer a {
+    color: #0ff0a0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0cd58a;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .register-section {
+        padding: 25px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
