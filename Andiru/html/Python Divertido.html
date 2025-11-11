@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Python Divertido</title>
+
+    <link rel="stylesheet" href="/Andiru/css/base.css">
+    <link rel="stylesheet" href="/Andiru/css/layout.css">
+    <link rel="stylesheet" href="/Andiru/css/navigation.css">
+    <link rel="stylesheet" href="/Andiru/css/course-content.css">
+    <link rel="stylesheet" href="/Andiru/css/widgets.css">
+    <link rel="stylesheet" href="/Andiru/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body data-course-id="python">
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <span class="logo-text">Global Learn</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Rafael/Html/dashboard.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+            <li><a href="/Adrian/Html/ventana_de_clases.html"><i class="fa-solid fa-comments"></i><span>Comentarios</span></a></li>
+            <li><a href="/Rafael/Html/ventana_de_ruta.html" class="active"><i class="fa-solid fa-route"></i><span>Mis Rutas</span></a></li>
+            <li><a href="/Adrian/Html/Notas_y_asistencias.html"><i class="fa-solid fa-chart-line"></i><span>Mi Asistencia</span></a></li>
+            <li><a href="/Gema/Html/Certificado - Examen.html"><i class="fa-solid fa-award"></i><span>Certificados</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-bell"></i><span>Notificaciones</span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <img src="https://i.pravatar.cc/40" alt="Avatar de usuario">
+            <div class="user-info">
+                <span class="user-name">Usuario</span>
+                <span class="user-role">Estudiante</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-container">
+
+        <main>
+            <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar en el curso...">
+            </div>
+
+            <h1>Python Divertido</h1>
+            <p class="descripcion">
+                ¡Descubre el poder de Python! Aprende a programar desde cero, creando juegos y proyectos divertidos
+                mientras entiendes cómo funciona la tecnología.
+            </p>
+
+            <div class="rating">
+                <p>Califica este curso:</p>
+                <div class="stars">
+                    <button class="star" data-value="1"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="2"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="3"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="4"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="5"><i class="fa-solid fa-star"></i></button>
+                </div>
+                <div id="ratingMsg" class="rating-msg"></div>
+            </div>
+
+            <h2>Contenido del Curso</h2>
+
+            <section class="unidades-curso">
+
+                <div class="unidad-card">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 1</span>
+                            <h3 class="unidad-titulo">¡Hola, Python! - Tus Primeros Pasos</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="python_m1_l1">
+                                <i class="fa-regular fa-circle-play status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="zRjbwI4K7xc">
+                                    ¿Qué es Python y por qué es genial? (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="python_m1_l2">
+                                <i class="fa-regular fa-circle-play status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Instalando Python y tu primer "Hola
+                                    Mundo" (Guía)</a>
+                            </li>
+                            <li data-leccion-id="python_m1_l3">
+                                <i class="fa-regular fa-circle-play status-icon"></i>
+                                <label for="entrega_m1_l3" class="upload-link">
+                                    Tarea: Modifica el "Hola Mundo"
+                                </label>
+                                <input type="file" id="entrega_m1_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 2</span>
+                            <h3 class="unidad-titulo">Guardando Información: Variables</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="python_m2_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="numQzIgpOo0">
+                                    Variables: Cajas para guardar datos (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="python_m2_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing." target="_blank">Tipos de Datos: Números y Textos
+                                    (PPT)</a>
+                            </li>
+                            <li data-leccion-id="python_m2_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m2_l3" class="upload-link">
+                                    Tarea: Crea variables con tu información
+                                </label>
+                                <input type="file" id="entrega_m2_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 3</span>
+                            <h3 class="unidad-titulo">¡Calculando y Tomando Decisiones!</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="python_m3_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="2qf2gKk9scg">
+                                    Operadores Matemáticos: Suma, Resta y Más (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="python_m3_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Condicionales 'if': Si pasa esto, haz
+                                    aquello (PPT)</a>
+                            </li>
+                            <li data-leccion-id="python_m3_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m3_l3" class="upload-link">
+                                    Tarea: Calculadora simple y Adivina el número
+                                </label>
+                                <input type="file" id="entrega_m3_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 4</span>
+                            <h3 class="unidad-titulo">Bucles: Haciendo cosas muchas veces</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="python_m4_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="0h_srypSheg">El Bucle 'for':
+                                    Repetir un número de veces (Video)</a>
+                            </li>
+                            <li data-leccion-id="python_m4_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">El Bucle 'while': Repetir mientras algo
+                                    sea verdad (PPT)</a>
+                            </li>
+                            <li data-leccion-id="python_m4_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m4_l3" class="upload-link">Tarea: Dibujando figuras y Cuenta
+                                    regresiva</label>
+                                <input type="file" id="entrega_m4_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 5</span>
+                            <h3 class="unidad-titulo">Listas: Guardando muchas cosas juntas</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="python_m5_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="CCUNuqqn7PQ">Creando y usando
+                                    Listas (Video)</a>
+                            </li>
+                            <li data-leccion-id="python_m5_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Recorriendo Listas con Bucles 'for'
+                                    (PPT)</a>
+                            </li>
+                            <li data-leccion-id="python_m5_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m5_l3" class="upload-link">Tarea: Lista de compras y Miembros del
+                                    equipo</label>
+                                <input type="file" id="entrega_m5_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 6</span>
+                            <h3 class="unidad-titulo">Funciones: Creando tus propias herramientas</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="python_m6_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="hLRoDs4wNCU">¿Qué son las
+                                    Funciones y para qué sirven? (Video)</a>
+                            </li>
+                            <li data-leccion-id="python_m6_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Creando y Llamando Funciones (PPT)</a>
+                            </li>
+                            <li data-leccion-id="python_m6_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m6_l3" class="upload-link">Tarea: Función para saludar y Calculadora
+                                    con funciones</label>
+                                <input type="file" id="entrega_m6_l3" class="hidden-file-input">
+                            </li>
+                            <li data-leccion-id="python_m6_l4">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="/Gema/Html/Examen - Python.html" class="examen-link">
+                                    Examen Final
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <div id="videoModal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="modal-close" id="closeModalBtn">&times;</span>
+                <div class="video-container">
+                    <iframe id="youtubePlayer" width="560" height="315" src="" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <aside>
+            <div class="teacher-widget card">
+                <div class="widget-content">
+                    <div class="teacher-header">
+
+                        <img src="https://www.poah.org/sites/default/files/styles/team_member_photo/public/team-photos/PaoloCisneros%20-%20Copy.jpg?itok=IHmNBJs9" 
+                alt="Foto del instructor" class="teacher-avatar">
+                        <div class="teacher-intro">
+                            <h4 class="teacher-name">Paolo Cisneros</h4>
+                            <p class="teacher-title">Instructor Principal</p>
+                        </div>
+                    </div>
+                    <div class="teacher-body">
+                        <p class="teacher-description">
+                            No solo les enseño a escribir código, sino a pensar como un programador":
+                            Resalta la importancia de ir más allá de la memorización de sintaxis.
+                        </p>
+                        <ul class="teacher-contact">
+                            <li><i class="fa-solid fa-clock"></i> <span><strong>Atención:</strong> L-V, 9am - 5pm</span>
+                            </li>
+                            <li><i class="fa-solid fa-phone"></i> <span>+51 987 684 123</span></li>
+                            <li><i class="fa-solid fa-envelope"></i> <span>prof.paolo@g-learn.com</span></li>
+                            <li><i class="fa-solid fa-video"></i><a href="https://zoom.us/j/TU-ID-DE-REUNION"
+                                    target="_blank">Clase en Vivo (Zoom)</a></li>
+                        </ul>
+                    </div>
+                    <div class="teacher-footer">
+                        <p>Califica al instructor:</p>
+                        <div class="emojis teacher-rating">
+                            <button class="star" data-value="1"><i
+                                    class="fa-solid fa-face-frown-open face-1"></i></button>
+                            <button class="star" data-value="2"><i class="fa-solid fa-face-frown face-2"></i></button>
+                            <button class="star" data-value="3"><i class="fa-solid fa-face-meh face-3"></i></button>
+                            <button class="star" data-value="4"><i class="fa-solid fa-face-smile face-4"></i></button>
+                            <button class="star" data-value="5"><i
+                                    class="fa-solid fa-face-laugh-beam face-5"></i></button>
+                        </div>
+                        <div id="teacherRatingMsg" class="rating-msg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-class-widget card">
+                <div class="widget-content">
+                    <h4>Siguiente Clase</h4>
+                    <p id="nextClassName">Cargando...</p> <button id="nextClassButton" class="btn-primary full-width">
+                        Empezar Ahora <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="progress-circle-widget card">
+                <div class="widget-content">
+                    <h3>Progreso del Curso</h3>
+                    <div class="circle-wrap">
+                        <canvas id="progressCircle" width="120" height="120"></canvas>
+                        <div class="progress-text-overlay">
+                            <span id="progressPercentage">0%</span>
+                        </div>
+                    </div>
+                    <p id="progressSummary" class="progress-summary">¡Sigue así para completar el curso!</p>
+                </div>
+            </div>
+
+            <div class="widget card">
+                <div class="widget-content">
+                    <h3>Tu Certificado</h3>
+                    <p id="certificateMessage">¡Completa todas las clases y el examen final para obtener tu diploma!</p>
+
+                    <a href="https://docs.google.com/document/d/1WrBzYEwaZKX7UWwCvv9BeyxCdJkF9I1xgpY3E7cKXo4/edit?usp=sharing"
+                        id="certificateButton" class="btn-primary disabled" target="_blank">
+                        Sacar Certificado
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+
+        <footer class="page-footer">
+            <div class="footer-content">
+
+                <div class="footer-column contact-info">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Av. Principal 123, Lima, Perú</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+51 987 654 321</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:soporte@globallearn.com">soporte@globallearn.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column about-info">
+                    <h4>Sobre Global Learn</h4>
+                    <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para
+                        todos los niños.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+
+        <script src="/Andiru/js/script.js"></script>
+
+</body>
+
+</html>

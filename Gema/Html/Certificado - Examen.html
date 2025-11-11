@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentar Examen - Global Learn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Gema/Css/certificado - Examen.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <span class="logo-text">Global Learn</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Rafael/Html/dashboard.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+            <li><a href="/Adrian/Html/ventana_de_clases.html"><i class="fa-solid fa-comments"></i><span>Comentarios</span></a></li>
+            <li><a href="/Rafael/Html/ventana_de_ruta.html"><i class="fa-solid fa-route"></i><span>Mis Rutas</span></a></li>
+            <li><a href="/Adrian/Html/Notas_y_asistencias.html"><i class="fa-solid fa-chart-line"></i><span>Mi Asistencia</span></a></li>
+            <li><a href="/Gema/Html/Certificado - Examen.html"class="active"><i class="fa-solid fa-award"></i><span>Certificados</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-bell"></i><span>Notificaciones</span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <img src="https://i.pravatar.cc/40" alt="Avatar">
+            <div class="user-info">
+                <span class="user-name">Usuario</span>
+                <span class="user-role">Estudiante</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="breadcrumb">
+                <span>Certificado</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon" title="Ayuda">
+                    <i class="fas fa-question-circle"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Exam Container -->
+        <div class="exam-container">
+            <!-- Left Section -->
+            <section class="exam-info-section">
+                <div class="exam-card">
+                    <div class="exam-icon-circle">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    
+                    <div class="certification-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>CERTIFICACIÓN</span>
+                    </div>
+                    
+                    <h1 class="exam-title">Curso de Introducción a la Web</h1>
+                    <h2 class="exam-subtitle">Examen Final - Evaluación de Conocimientos</h2>
+                    
+                    <div class="exam-description">
+                        <p>
+                            <i class="fas fa-info-circle"></i>
+                            ¡Excelente! Estás a punto de validar todo lo aprendido. Para certificarte, 
+                            puedes presentar el examen las veces que quieras hasta alcanzar la nota mínima aprobatoria.
+                        </p>
+                    </div>
+
+                    <div class="exam-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="stat-value">30</span>
+                                <span class="stat-label">minutos</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-list-ol"></i>
+                            <div>
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">preguntas</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <span class="stat-value">14/15</span>
+                                <span class="stat-label">para aprobar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="previous-attempts">
+                        <h3><i class="fas fa-history"></i> Intentos Anteriores</h3>
+                        <div class="attempts-list">
+                            <div class="attempt-item">
+                                <div class="attempt-info">
+                                    <span class="attempt-number">Intento #1</span>
+                                    <span class="attempt-date">15 Oct 2025</span>
+                                </div>
+                                <div class="attempt-score failed">
+                                    <i class="fas fa-times-circle"></i>
+                                    11/15
+                                </div>
+                            </div>
+                            <div class="attempt-item">
+                                <div class="attempt-info">
+                                    <span class="attempt-number">Intento #2</span>
+                                    <span class="attempt-date">16 Oct 2025</span>
+                                </div>
+                                <div class="attempt-score failed">
+                                    <i class="fas fa-times-circle"></i>
+                                    13/15
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-secondary" onclick="window.history.back()">
+                            <i class="fas fa-arrow-left"></i>
+                            Volver al Curso
+                        </button>
+                        <button class="btn-results">
+                            <i class="fas fa-chart-bar"></i>
+                            Ver Resultados
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Section -->
+            <section class="exam-instructions-section">
+                <div class="instructions-card">
+                    <div class="card-header">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>Instrucciones del Examen</h3>
+                    </div>
+                    
+                    <div class="instructions-content">
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-redo"></i>
+                            </div>
+                            <div class="instruction-text">
+                                <h4>Intentos Ilimitados</h4>
+                                <p>Puedes presentar el examen <strong>tantas veces como quieras</strong> hasta aprobarlo.</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-list-ul"></i>
+                            </div>
+                            <div class="instruction-text">
+                                <h4>Número de Preguntas</h4>
+                                <p>El examen consta de <strong>15 preguntas</strong> de opción múltiple.</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-hourglass-half"></i>
+                            </div>
+                            <div class="instruction-text">
+                                <h4>Tiempo Disponible</h4>
+                                <p>Tienes <strong>30 minutos</strong> para completar todo el examen.</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="instruction-text">
+                                <h4>Nota Aprobatoria</h4>
+                                <p>Necesitas <strong>14 respuestas correctas</strong> (93%) para aprobar.</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-save"></i>
+                            </div>
+                            <div class="instruction-text">
+                                <h4>Guardar Progreso</h4>
+                                <p>Tus respuestas se <strong>guardan automáticamente</strong> mientras avanzas.</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="instruction-text">
+                                <h4>Importante</h4>
+                                <p>Una vez iniciado, el <strong>cronómetro no se detendrá</strong>. Asegúrate de tener tiempo suficiente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tips-section">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos para Aprobar</h4>
+                        <ul class="tips-list">
+                            <li><i class="fas fa-check"></i> Lee cada pregunta cuidadosamente antes de responder</li>
+                            <li><i class="fas fa-check"></i> Si no estás seguro, marca la pregunta y vuelve después</li>
+                            <li><i class="fas fa-check"></i> Revisa tus respuestas antes de enviar el examen</li>
+                            <li><i class="fas fa-check"></i> Mantén la calma y confía en tu preparación</li>
+                        </ul>
+                    </div>
+
+                    <button class="btn-start-exam">
+                        <i class="fas fa-play-circle"></i> <a href="/Gema/Html/Examen - Página Web.html" class="examen-link">
+                                    Comenzar examen
+                                </a>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div class="footer-column contact-info">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Av. Principal 123, Lima, Perú</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+51 987 654 321</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:soporte@globallearn.com">soporte@globallearn.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column about-info">
+                    <h4>Sobre Global Learn</h4>
+                    <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para todos los niños.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Toggle Sidebar
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

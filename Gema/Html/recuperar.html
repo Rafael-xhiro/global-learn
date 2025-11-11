@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - Global Learn</title>
+    <link rel="stylesheet" href="/Gema/Css/recuperar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-graduation-cap me-2"></i>
+                <span class="logo-text">Global Learn</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/Trabajo/html/index.html">Inicio</a></li>
+                    <li><a href="/Trabajo/html/index.html#cursos">Cursos</a></li>
+                    <li><a href="/Trabajo/html/index.html#beneficios">Beneficios</a></li>
+                    <li><a href="/Trabajo/html/index.html#precios">Precios</a></li>
+                    <li><a href="/Gema/Html/login.html" class="login-btn">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+        <section class="recover-section">
+            <div class="recover-card">
+                <div class="recover-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                
+                <div class="recover-header">
+                    <h2>¿Olvidaste tu Contraseña?</h2>
+                    <p>No te preocupes, te ayudaremos a recuperarla. Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+                </div>
+
+                <form class="recover-form">
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                            Correo Electrónico
+                        </label>
+                        <input type="email" id="email" required placeholder="tu@email.com">
+                        <small class="form-hint">Te enviaremos un código de verificación a este correo</small>
+                    </div>
+                    
+                    <button type="submit" class="recover-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Enlace de Recuperación
+                    </button>
+                </form>
+
+                <div class="recover-help">
+                    <div class="help-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <strong>¿No recibes el correo?</strong>
+                            <p>Revisa tu carpeta de spam o correo no deseado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider">
+                    <span>O también</span>
+                </div>
+
+                <p class="login-link">
+                    ¿Ya recordaste tu contraseña?
+                    <a href="/Gema/Html/login.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver a iniciar sesión
+                    </a>
+                </p>
+
+                <p class="register-link">
+                    ¿No tienes una cuenta?
+                    <a href="/Gema/Html/registro.html">Regístrate aquí</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-column contact-info">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Av. Principal 123, Lima, Perú</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+51 987 654 321</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:soporte@globallearn.com">soporte@globallearn.com</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-column about-info">
+                <h4>Sobre Global Learn</h4>
+                <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para todos los niños.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

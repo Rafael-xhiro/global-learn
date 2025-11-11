@@ -1,0 +1,390 @@
+/* ==============================
+   VARIABLES GLOBALES
+============================== */
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --color-bg: linear-gradient(135deg, #0b2d27, #153d33);
+    --color-bg-light: rgba(0, 0, 0, 0.85);
+    --color-bg-accent: rgba(255, 255, 255, 0.06);
+    --color-primary: #00e27f;
+    --color-primary-dark: #00c06c;
+    --color-text: #ffffff;
+    --color-text-muted: #a0b0c0;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   RESET GLOBAL
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==============================
+   SIDEBAR IZQUIERDO
+============================== */
+.sidebar {
+    width: 240px;
+    background-color: var(--color-bg-light);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--color-border);
+    z-index: 500;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.nav-links {
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+    background-color: var(--color-bg-accent);
+}
+
+.sidebar-footer {
+    border-top: 1px solid var(--color-border);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+============================== */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+}
+
+.d-flex > main {
+    flex: 1;
+}
+
+aside {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ==============================
+   SEARCH BOX
+============================== */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-accent);
+    border-radius: 8px;
+    padding: 0 15px;
+    margin-bottom: 25px;
+}
+
+.search-box i {
+    color: var(--color-text-muted);
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-text);
+    padding: 12px 10px;
+    font-size: 15px;
+}
+
+/* ==============================
+   TITULOS Y DESCRIPCION
+============================== */
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.descripcion {
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 1.7;
+    max-width: 70ch;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+}
+
+/* ==============================
+   RATING
+============================== */
+.rating {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.rating p {
+    margin: 0 0 10px;
+    font-weight: 500;
+    color: #a8f3bf;
+}
+
+.rating .stars {
+    display: inline-flex;
+}
+
+.rating .stars button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rating .stars button:hover,
+.rating .stars .star.active i {
+    transform: scale(1.2);
+    color: var(--color-primary);
+}
+
+.rating-msg {
+    margin-top: 8px;
+    color: #bfeed1;
+    font-size: 14px;
+    min-height: 21px;
+}
+
+/* ==============================
+   MODULOS Y LECCIONES
+============================== */
+.unidades-curso {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.unidad-card {
+    background-color: #202225;
+    border-radius: 12px;
+    border: 1px solid #36393f;
+    transition: all 0.3s ease;
+}
+
+.unidad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.unidad-card.is-locked .unidad-header {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.unidad-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.unidad-numero {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+}
+
+.unidad-titulo {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.chevron-icon {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    transition: transform 0.3s ease;
+}
+
+/* Chevron rotación al abrir módulo */
+.unidad-card.is-open .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.lock-icon {
+    font-size: 16px;
+    color: #e74c3c;
+}
+
+.unidad-body {
+    padding: 0 20px 20px 20px;
+}
+
+/* Lista de lecciones */
+.lista-lecciones {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.lista-lecciones li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    color: var(--color-text-muted);
+}
+
+.lista-lecciones li span,
+.lista-lecciones li a,
+.lista-lecciones li .upload-link {
+    transition: color 0.2s;
+}
+
+.lista-lecciones li:hover span,
+.lista-lecciones li a:hover,
+.lista-lecciones li .upload-link:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.lista-lecciones li .status-icon.completed {
+    color: var(--color-primary);
+}
+
+/* Bloqueo de lecciones */
+.unidad-card.is-locked .lista-lecciones li a,
+.unidad-card.is-locked .lista-lecciones li label {
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none !important;
+}
+
+/* Inputs ocultos */
+.hidden-file-input {
+    display: none;
+}
+
+.upload-link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
+.upload-link:hover {
+    color: #00c06c;
+}
+
+/* ==============================
+   MODAL DE VIDEO
+============================== */
+.modal-content {
+    background-color: #202225;
+    color: var(--color-text);
+}
+
+.modal-header, .modal-body {
+    border: none;
+}
+
+.modal-body .ratio iframe {
+    border-radius: 8px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    background-color: var(--color-bg-light);
+    color: var(--color-text);
+    width: 100%;
+    flex-shrink: 0;
+    padding-top: 40px;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Estrellas activas */
+.star.active i {
+    color: #ffd700;
+}
+
+/* Botones de emoji activos (docente) */
+.card .btn.active {
+    background-color: var(--color-primary);
+    color: #fff;
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scratch - Mis Primeros Juegos</title>
+
+    <link rel="stylesheet" href="/Andiru/css/base.css">
+    <link rel="stylesheet" href="/Andiru/css/layout.css">
+    <link rel="stylesheet" href="/Andiru/css/navigation.css">
+    <link rel="stylesheet" href="/Andiru/css/course-content.css">
+    <link rel="stylesheet" href="/Andiru/css/widgets.css">
+    <link rel="stylesheet" href="/Andiru/css/components.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body data-course-id="scratch">
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <span class="logo-text">Global Learn</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Rafael/Html/dashboard.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+            <li><a href="/Adrian/Html/ventana_de_clases.html"><i class="fa-solid fa-comments"></i><span>Comentarios</span></a></li>
+            <li><a href="/Rafael/Html/ventana_de_ruta.html" class="active"><i class="fa-solid fa-route"></i><span>Mis Rutas</span></a></li>
+            <li><a href="/Adrian/Html/Notas_y_asistencias.html"><i class="fa-solid fa-chart-line"></i><span>Mi Asistencia</span></a></li>
+            <li><a href="/Gema/Html/Certificado - Examen.html"><i class="fa-solid fa-award"></i><span>Certificados</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-bell"></i><span>Notificaciones</span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <img src="https://i.pravatar.cc/40" alt="Avatar de usuario">
+            <div class="user-info">
+                <span class="user-name">Usuario</span>
+                <span class="user-role">Estudiante</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-container">
+
+        <main>
+            <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar en el curso...">
+            </div>
+
+            <h1>Scratch - Mis Primeros Juegos</h1>
+            <p class="descripcion">
+                Aprende a crear tus propias animaciones y videojuegos. En este curso, darás tus primeros pasos en el
+                mundo de la programación con Scratch.
+            </p>
+
+            <div class="rating">
+                <p>Califica este curso:</p>
+                <div class="stars">
+                    <button class="star" data-value="1"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="2"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="3"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="4"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="5"><i class="fa-solid fa-star"></i></button>
+                </div>
+                <div id="ratingMsg" class="rating-msg"></div>
+            </div>
+
+            <h2>Contenido del Curso</h2>
+
+            <section class="unidades-curso">
+
+                <div class="unidad-card">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 1</span>
+                            <h3 class="unidad-titulo">Conociendo Scratch</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="scratch_m1_l1">
+                                <i class="fa-regular fa-circle-play status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="Z_uHtpR9Ims">
+                                    ¿Qué es Scratch y para qué sirve? (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="scratch_m1_l2">
+                                <i class="fa-regular fa-circle-play status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Explorando la interfaz (PPT)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m1_l3">
+                                <i class="fa-regular fa-circle-play status-icon"></i>
+                                <label for="entrega_m1_l3" class="upload-link">
+                                    Tarea: ¡Moviendo al gato!
+                                </label>
+                                <input type="file" id="entrega_m1_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 2</span>
+                            <h3 class="unidad-titulo">Movimiento y Animación</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="scratch_m2_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="gfsUuVFvax0">
+                                    Coordenadas X/Y (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="scratch_m2_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Bucles y Repeticiones (PPT)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m2_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m2_l3" class="upload-link">
+                                    Tarea: Anima tu nombre
+                                </label>
+                                <input type="file" id="entrega_m2_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 3</span>
+                            <h3 class="unidad-titulo">Sonidos y Diálogos</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="scratch_m3_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="ch3sUf5KiEo">
+                                    Añadiendo Sonidos (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="scratch_m3_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Creando Diálogos (PPT)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m3_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m3_l3" class="upload-link">
+                                    Tarea: Crea una conversación
+                                </label>
+                                <input type="file" id="entrega_m3_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 4</span>
+                            <h3 class="unidad-titulo">Variables y Puntuación</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="scratch_m4_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="XAGFzkXR7rc">¿Qué es una variable?
+                                    (Video)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m4_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Contador de puntos (PPT)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m4_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m4_l3" class="upload-link">Tarea: Tu primer contador</label>
+                                <input type="file" id="entrega_m4_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 5</span>
+                            <h3 class="unidad-titulo">Lógica y Sensores</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="scratch_m5_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="t0cjd7-amNM">Condicionales "Si..."
+                                    (Video)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m5_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Sensores (PPT)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m5_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m5_l3" class="upload-link">Tarea: Juego de laberinto</label>
+                                <input type="file" id="entrega_m5_l3" class="hidden-file-input">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
+                        <div class="unidad-info">
+                            <span class="unidad-numero">Módulo 6</span>
+                            <h3 class="unidad-titulo">Proyecto Final: ¡Tu Propio Juego!</h3>
+                        </div>
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                    </div>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="scratch_m6_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="L6_Q5VBZAu4">Planificando tu
+                                    proyecto (Video)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m6_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing" target="_blank">Pantalla de Inicio (PPT)</a>
+                            </li>
+                            <li data-leccion-id="scratch_m6_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m6_l3" class="upload-link">Entrega: Proyecto Final</label>
+                                <input type="file" id="entrega_m6_l3" class="hidden-file-input">
+                            </li>
+                            <li data-leccion-id="scratch_m6_l4">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="/Gema/Html/Scratch - Mis Primeros Juegos.html" class="examen-link">
+                                    Examen Final
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <div id="videoModal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="modal-close" id="closeModalBtn">&times;</span>
+                <div class="video-container">
+                    <iframe id="youtubePlayer" width="560" height="315" src="" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <aside>
+            <div class="teacher-widget card">
+                <div class="widget-content">
+                    <div class="teacher-header">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUQEBIQEBUVFRUVFRAPFRAPEBAQFRUWFhYVFRYYHSggGBolHRUVITEiJSkrLi4uFx8zODMtNygtLi0BCgoKDg0OGhAQGi8gHx0rLS0rLS0rLS0tLS0tLS0tLS01LS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstLS0tKy0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xABAEAABAwIDBQUECAUDBQEAAAABAAIDBBEFEiEGMUFRYRMicYGRBzKhwRQjM0JSYnKxFSSC0fBTsuElY6Kj8ZL/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAKxEAAgIBAwMDAwQDAAAAAAAAAAECEQMEITESQVETFDJhcYEFIiMzQlKx/9oADAMBAAIRAxEAPwDR5EoMTlkoBMkQGJQalgJQCQCWtTgYiATrQgYQYlhiUAlgIAbDEfZp2yOyAGuzR9knbIwEAM9ih2KfdoCeXLesptDte2Jh7PucM794PIaZfO5GqltIpRbL0TxXt2jARvBc0OFt9wdQo82K0zRczR25g5h6hckxXaFzjncC4kA9tm7a7dd/5d/C29VZqnuGcPuOOugPJ399FHW/BfprydwgxKnf7k0Trmw7wFzyUzslw+hBcwubnu33mN0e3rl4jfu+assJxuaE3Er3RkXD2nc07iRqLbwl6lcofpeGdeMSSWLK0O18kZDamPtGO1ZPFYXb1Glzv5bitjSSslYHxkOB9R0I4FaRkpcGcouPJHyI8imdkh2aZJDEaWIlJDEoNTAjdijEKk5ULIAj9gldgE/ZCyAGRCEoRBO2R2QA2I0eROWQsgBvKjDUuyMBACMqCcQQBnAlhNApbSqEOhKCQClBIBQS2psFLaUhjzUsJtpTgQAoJQSUYKYWKCUAkhR8UrRDC+U/dbfz3D4pPYDI7Y7Tvjc6BrC9oNndkSHHiQTrpz05rA1WJ9pIJI3OPB0LwBmad7S4C/hpy14KZjEmdt35ryG4s2z3OcdwaRoNBxB8OOv2U2GZHGJJwXOOuRxLsvRc3Ve7OpQrZGGbhtyRawccwtoWu5gjcSCAeo9Diwcsf2jAM25zMuWOZh5t3A7/APNF1V2EQN3MA6cEz9EjadGgLN5KNY4rOdR4W5kofCHHKbcbmLXuk8xw6EclPhw+RvfEe+5LMps17vtMvDK4gOy7gSVu2R23AeQUpgvwUPLZp6SRgZGOZDkcxwYD3cwL3RsdpYj7zWkbuLTp3mhZ7C9pZqWYiKVzGn3mZQ8Bw0sQ73h1FjYrtAgaRYgEdVzzbHZQNk7WJos/eLaAj5f50V450ZZMdo3mzWOMq4Q8FucAZ2j7rvA6hWxXLNkI3QVbL3YXd0gHRwO5p58LLqRK6oS6kck49LDRhIR3VkC0aQCjBQAdkdkV0YQALIwEYRoAIBCyUggBNkAEaMIAJBKQTAy1SA3jdN00+cXCxGzmKSySFsjswsd/RbTYOVr6cg7w94Pk4pKV3XYOmiWHJYcpUtCCCVDji1sl1B0jmZVuKVzm2EepSMRrjHcW0HFUrKrM++pW+nqUzDVXHE2tiHjO18kDgzLc3topGGbdZnBrgQeqze0gHa5jpqN6ooJbSm1jqtNQkp0kZaRuWJNuzutHiLXgG4UwPXJMBxGQ1DIw6zeXguoPdaO/Rc9HVYdbWZRosrtNjJdCYwLkncdxtzSKStdI7vG+p/dQMSpS57XAaB5BHA35+ijLJLH9zPG289XwO7G4J2s7JpW3yXdc/efuHkunMZcWVVs/RhkdxfUC1/irfcuQ9MrquCyguiVvWRkjl4KCW2WclubwewUMVk9DFcnxskxtUumhO9LpKbA5llExCAPjc08rgjeD0Vk6NMuGqKIu0cZx6R8M0bWXBBaN+ndeXNI5EX09F08Y8zQXF7LJ7Z4Tmma62l/2T2HQZpLchZbwm1sisWnhkUpS7GygrWuF7qQHrG7R1LoY7tOWzUMI2qYWDMddFr6iWzOTNgUd4m0DkoOVTh+JNlF2lPVVaGArRSTVnNXYfqsRZH7xA8VKglDhcLkm0eMGSbJc2BC6Vg1Q0RNF+AUqVujqzaZ48ak+WWwQLxzCodpMZEEReNbDdzWCk2rnlF2uydBqqbQtPpJ5nS2OuCQcwlArkUWOVP8AqH0CvMO2ukEJJa55byCcf3Oka6jQTwx6m7OgpuWYNGpsqHZnH+3aTJ3NdATfRVe2mIEOaI3HrlTao44xt0WE2KzZjlbcX0N0FXU+Ktyi/JBcjyzNvSiZ/B9m5WFzwRex+K0GxGHSQsyyEElzjp1N1Y0ZNndVIoHai63js39TBvZLwSah5yuUCnkuT4KxntlcVVUTruJ6JSi7KUk0V+OzAxOZbXXXyVdgsAzai+gT1ezNK4f5uR4eMslvyhXpptzM9TFLGY3b5hMndG5wCosHgvJY8Fr9rXjtQCL6hZqif9e63NdWd3P8HJplWP8ALLPZ9v8APAdD8l1Ko+z8lyvZ4/z48D8l1eqb9V5LE6OxktnmXd6/uVdilDswtu1HiFT7Mb/X91eQTgShgPfeSGaXF2i5J6blyatSeFKPNovSx6s5d0lXHHCHSPZGPxSOawepUZ21lFYllQya28U4fU28ezBWDxXZR82K088+TLK17ckgDmdrEDZpB94ObmcB+QrX1NK+IBoGf8rQMoHRo0CnakdqTtoXLtpTXy/XnS/2E4FuGpb8Eqm2hpZXFrJoy4b2Ehr235tOoWY2gnnhlEXZxuDgCXx3c0ZvLX/grP4sx9TQzMMbS9r4WRShoGZ8kzI8ovqbhx06X4IcXe44yVNrsdHrNoaaADtJWAk6NuMxPIDeT0GqjVO0tVlvBRSFthZ1QRAD/Tq8ebQshgGyzcMrqSWUh8T3OjLnAfVVjmWZr11APPyWi2tZI+QtzODLaAG3e6i2o9UnS4NEpSdND8eNYg4XdFSMJ4GSVw8L5QqrGtsa6lbnlpKeVl7F8M0tgTuvmj0Vpsjgkoid2ry837tzdpBN9Qd1hppYqx2oomuozA8XMr4YgG+8c8rASD0aCb8gU6V+SLdeDOQY22uYx3ZviJAdlfqAeTXaX9E7g4LZnBwIPXRayPD4xICGMGUd3QC3DT0CpgLzHNqczgDxyX/vdSvlZ2YZVjlEotu5B2ZHRZTD2d3RaL2haM06LP4Se4pznPqPii/wzFexbYoT406R1raWVPUlMU893kdF1YF/GdOPTY/SU63ZDxF95ieqssIxeYyMZmIaOHNU9SbyuVvgMAzNd4rOXyOvNFdO5Z7TyEsNyd266zGEblo9pj3D4LP4Lu8048msFVF6wdzcpGDC1PKepS2yNLbdEih0ppPErq0/yOH9Qd4vyUuM4i9kbBG5zDxLTYneoWHY9Z2WZxeTuLiSixrUN8FnoDecLvlGMsNHz6/tNXNtE0OIRLMV0g7R3iiXB6EDq6jvtK2zPJPYbHex5JujbeP+kKXhbLDyWKMBnE6gD6sb3KFSC0hHRRK8n6QL/i09FLhP1x8EN2VVFcWXqHf5wSY48s5/SFoKOmbdzuKpcTcGSFx5BVpoNT+5nqZL0/sY/ajWoN+YWdoR/MO8Ve7R1LTIXdQs3RPvMS3iV16hVOvscekkpYrXl/8AS52eP/UG+B+S6tXu+pP6VyrZ5h+nNvyPyXUcR0hN/wAKxR0mU2TcTv8A81WgoWjthJbVhJ8iLH5eiodkZAR5LRYcQXu81xazJ0Yk/qjbRbah/kchLqylc+KzJY5c8JcdO2jNwHHg1wLmHo8qbBtLC5ty4RSD36eUtjmhdxDmn/cLg7wSErZZsYiPZaBzy4j8LtA4eoVtVUzHjvta634gHH4pQ3ijvzJLK9tjI4piVHKfrJoyfwte17z/AEtuSkU2HGeSmdGx0FPBKJg17SySokDXWe5p1a1twAHWJJJsABeXiz2x7gBbgNP2Vrs/UdpTte4hgOawO+wOilPejSUf2p9hjE8MbV00tM64z6hw0LHg3a4HgQQFWRurI4xHUU7qstsBNC6FrngcZGSOaA79JIO/S9hf0drnXipEjyIyWHPYXte90ktipc7FBS4rO3utoqkeLqEW/wDcpdNRzSzNnqcrGxZjDAw57SOBaZZH2F3ZS5oaNBmcbm4tKw2oEliFZTW4Ko8Gc1TopcVL80fZ78+vRtiST6KmhmvVSDkQPK3/ACr3EXkNIaLucco6X4rM0DL1MhBv3yLqI/I68aTxuyo9orxl9P3CzmHHuK79o+4eI/dUuH+4jOcefhD1Q7RMwM75PQJNbe+iOnPePgF2YP6j0sTvBFFbL9q5X+AHRv8AnFUE/wBo5aDAh3Wnp/ZYv5F5viP7UHuFZ7Cvs1d7Uydwqkwz7NEeTeC3RaUqsGOtSO6lQKVSZ32prcyuzT8s4v1X+tfcz+Ln3R0WYidaZaPHX2I8FmoNZCuyT/YfOr+xjdS+7z4ok1Oe8fFBclmx6WwsXZb8oU2jYRYFU2E4i1tr2GinMxdmbeFyxnHyT0SXYmVlCHi9tQq0QZX3O9WFPiseuo9VW1GINMnROUoruOMWyxpBvVZtZR/VFwGuikwYiwA6hRsfxNhhIFibfFa4skYzTsyz4nPFKNdjlO1sRFhu3KpwRru0sBdX+0YfKRYBR9nIHRvJe3et9TljLJaZy6LBPHgUWmStnXfz7b8j8l0bGz9Sf0rnmHxPFaJLWGvxst5itQDA7nkPrZYqUX3OhxkuxmdmhZtxyWl2ccST4rKbNSuAs4W0Ws2YnAcb81536k+rT9N9zXSRa1LkXWEUZie8gWa43tfcfBWjptNUwaltkmU3tyKx0mZyhzdHpZf3StlHjkGZwbqcxAt0vqrmKERsAygho7twNNOqptoWzFwbBlzEaOdchvXRSH0dSYG9pOLhuvZsy5ndQSV0w5ZTtpKxynqCx9yB3vI2Vs1pOt/K6x8NBNfWV43XByW8bFXsGCmwzSSX42cR6AaBNGs4RX+Q/SxBsx4E8txup8jlTUWFOinLg972HUCRxeWu8TrZWsjlnZlLnyZrabFTG4MabXbc266f3VTs1VtaTc7ynsYc2SR7jwOXyboqbDIgXm99DoiLpnqrHD0Onv3G/aJKHWtzCqcOb3Apm2EdyALnUJigbZgCWZ2ePqVVJBVQUClJzuup9bfkUzCLk6LuxP8AiPUg16MEVJ+0ctTs7bJrv+SzRYc7tOat8EY4Eclzv5FZUmhe1XulVmHD6sKy2qPcUDCx9W2/MKoG8WupfYsaQaHwS6t/1LW9Va4nHG1rSy3u628FSVA9zxXZp+Web+pT68cX9TPY+7vkdFR0vvkrY45SR9k55IzLFZ7ErqnJOGx4K+bZHk1JPVBECguJs0OuyYoy3dKS3EWnerJuDx8koYMzkuX2cS/dS8EFtSy+hU2OrjtvTgwVnJKGCsUvRryUtW/AzJOzg5NNnZ0U0YK1GMEap9kvJXu34KqVzCeCOJjeitf4G1KGCjmj2f1H7z6EZgZv0UpmUixOnJF/BuqU3BzzS9m/9g90vAcdPHwsFIhiY3cQEyMJPMpQwp34ioeibVNjWqXgkuk/MriideJvHqs//CXc1ocKpi2ANdwJ9EY9K8W5XuFPaiRFCCb8UzXPIba3oj7Qt3pFXWjKdy17DT3Kdo719fDRXlJK4gDhzVDLOMoIPFW1LXgNAuFnFM6JyjRZSO06qI99zYJozF503J5kdghmaMvPRtzE8yT8VHNI0bkusid9Jlha7VhBynfleLg/v6JTcNl5rL2WVPdh7+L8iP4ax/vC6cZg7BwT0eHyhOfQ5U/a5fJm9VBkCXDG8k27DGgaBWX0KVH9DlVLBmXcfuoFMNnr68+iep8Bc3/4rdtPME7GycJrBlB6uJQ1uBFw1F/JMw7PWFrD0Wn7Obkg2Cfkj0co1rF5M6MBcdNLW43KiSYIQ4A8Oi130eo6JiXDpzrp6K1DOuGTLUwl8jKSbLNffNex4cFDfsRCtl/DKnm30KQ7C6n8vxQ46jyR6mDwYo7Bwolq34LWE72fFBL09R5H6mDwT2wpYiUkMSw1eieeRxEliFSAxONYgCMIUsQqUI0sRoGRBCldipgjSxGkBBEKU2BThEjcABckAczoEAQxAliELPbRbe0dKCGuE8n+nFrY/mduC5fjm21VVk5nGKPhFES2/wCp28pqIWdVx3aamphYuEj+EbCCfPkFoMMlL6OCd2meMOPJubUeWtl51h7sT5DvIOq9LbNR/wAhTtIv9RGCD+gKpQTjQozalZDlivr03cPFVGIwaK6q6Z0Vy27mct7meHMfFQprOFxYg8RqCuKUHF7nbGSkrRlG07s24q+oKPdeyAi1VlStUGtD0UQCegjzvDRuGrugTWcl3Zx95+88mN5u+Q4q4pKcMbYaniTvJ5rXDit2+DHNl6V0rlnIPa9JJS4jBVQOLDJEWm252RwtccfeKmbP+0Kne0NqvqXjQusTGet+Ch+3yX66kbxyym/S7AuZv5rulFM4Uej6OWOVofE5r2nc5pBCkCFec8Jxyoo356eQsB3s3sPi1dJwH2tRus2riLDxki7zfEt3j4rNxLs6J9HRiBNYVj1LUi8E0b+gIzDxG9WeVTQyIIEoQhScqKyAGRGEeVOWQsgBOVCyVZBACbIWSkklAAsgizIIAzzQnA1BrU60JkhNanA1GGpYCBgDUsNRtasjtjt5HRPMLIzLLa+8NjaTqA4792uiKEbENUSuxengaXSzRsA5uF/RcHxja6sqXXkme0cI4iY2AeA1PmqNzidSSep1KrpCzqW0XtTGrKJl/wDvSiw/pbv9bLBYrtLVVF+2nkcPwg5W+gVVZDKqoQ1a5sl73ADgjiGpPLTzQg95AEutdaLL0Xoz2fYq2pwymlG8Rhjhykj7rh8F5trn3bZdZ9iOICOn7Jx7r3E2O4Pvb46KuSeDqb1V1WHAkujIY47x9xx6jgeo+KtZFSbTY9FRQGaXvH3Y4m+/LIdzW/uTwAJS6VJUwUnF2iJMws+0a4eALwfCycpmzS6MaYWcZHjv+DGcD1d6FcTxfHqmpndPJK9rnaBkbnNZGwbmNHIfFWewO00tDOXOc59O7WaNxJy/91n5hxHFQtNGzZ6qdHd6GkZE3KwdSTq5zuJceJUtqahka9rXsIc1wDmubqHNIuCE3X1ORmnvO0b481ddjK+7OEe2vEe1xNrB7sUeUdXE3cf2Hksa7crn2mu/6rIxv3Gsaf1ZQ4/uqQHRU+QXAgm9wm2lHH7yNzdVAxyGYtOZpLSNzmkgjwIW02f9pVZTgNkIqWcpdHgdHj53WGASkDO2YZ7W6R5tPHLB+awkZ/46/BbbCsXp6luenljlH5CCR4jgvLxT1FVyQvEkT3xOH32EtI9N46JOKCz1TZEQsP7MNs318To58omj1zN0EkZNg63Ajj4hblZtUUIKK6UU2UAAlMSSJxyizIEIdUIKK46oJ0ATQnWhIATrQgBTQnAEloTjQgAwvOe2VUZKl8hN7vJv0LtPhZd32rrOxpJHA2cRkb4u008rlefsfGp/ziFcVtZLe5GASgEmM6JSoQaJ25Gm3SDxQAmJ3BKi3posJNzonmFAxUw0XQdgIj9DaW/idu5hxWBduXTfZef5MX/1Hj43+aqGzIlwdKwjEw+O0hAewDNfiOBWJ9o1PJKBKRcROD2galrbEOI56G58FYVsBa/MOKeZiIyubILgA7+gWkVW6M2zi01nOcWA2BNy7nqbALQbEYWK574gQ0RgPeLjO9p9wAcW3368OqzU8mWwAHM+JWi2Ie6Ktina7LmDonjm1wIHiL2PkmrvYO251nYaR8QdRuuWR6scdcoJ1ael9Qpbqvtaq33W38gE1h5EVO+Q6F2tzvI4KBhb7RVEx4RuserrgJOrbBcJHD9qpTJiE8h3vcXeAcbj4WUMhSMcN62fo4D0aAmCsnybDbNNSkl1zyTuW7SmwEhh2QsjajQIATdSbNPgnQo9b7vmEMZrPZziRpquGT7pcGP6sf3T6Gx8l6IK8u0WjQvR2zWI/SKOGfi6MZujx3XfEFRNDiWRTZSyUgqBiHKLMVJcok6AIL3aokhx1QTESgE41NhLBQMeanGplpS3yBrS52gaCSeQAuUAYD2lYneRtO06MGZ363bh5D/cuVY3xPQrSYzWmWR8p3vcXeAJ0HkLBZzFNR6/stqpUZJ72Q4TonAmqb3R4J1pSRQCFGfo4FS3hR526IYIWUcYSQbhOMQMXwXQvZvJajd0md/taVz0LcezQkxSs4CS/q1o+Spcks3NdNdt0zUAuhldwETz/wCBKjSSZjk62VpjEggw+Q8SwsHi8ZfmrRmzhkjr77fHetHs4R2sV93axehe0b/X4LNEa21PH+yu8MlIIP4SHDhuIN1ceSZcHXNo6ywELfPwSaz6rC5XcXGMer2qra/tZi88TYeCsdvZOzwxo3XlZ8Lu+SJrpSQRds4XUvzVEzucj/gSEZUendcl3Mk+pun7rA3FRnhzTJHDql3RSHVIA2oygECmAajVu4DmQpJUap3tHVJjRaUu5dc9kGKZoJKUnWN2do/I/fbwcD/+lyKI6LS7BYp9Hronk2a53ZP/AEyWHwOU+SGrQkd3KSUpySVkWIcokylvKhzlAFe/egkuOqCBEgOSg5BBMY41ypdt67sqGS299ox/UdfgCggiPInwchleqrECggtmZrkg0/uBOxnVBBSix6RMuQQQJDUB08CU8EEEIYsFbn2XSd2pHIxn1z/2QQVR5Jlwaai1m81f7Qwh9K9h/ASPFov8kEFRmzgd+9wVnRcR0P7IILSPInwdQ2THaOaeTb+ZSfbBUZaKIc5SfRjkEEZvkLFwcUpvdTt0EFznQE06ogbkoIIAduiKCCYg3HRRZz3mefyRoJMaLFh0TrH+XVBBUSeisAru3pIZzvfG1x/VbX43U0oILBljUhUGocgggZWudqggggR//9k="
+                            alt="Foto del instructor" class="teacher-avatar">
+                        <div class="teacher-intro">
+                            <h4 class="teacher-name">Andrés García</h4>
+                            <p class="teacher-title">Instructor Principal</p>
+                        </div>
+                    </div>
+                    <div class="teacher-body">
+                        <p class="teacher-description">
+                            Apasionado por la enseñanza de tecnología a niños y jóvenes. ¡No dudes en consultar si
+                            tienes preguntas!
+                        </p>
+                        <ul class="teacher-contact">
+                            <li><i class="fa-solid fa-clock"></i> <span><strong>Atención:</strong> L-V, 9am - 5pm</span>
+                            </li>
+                            <li><i class="fa-solid fa-phone"></i> <span>+51 987 654 321</span></li>
+                            <li><i class="fa-solid fa-envelope"></i> <span>prof.andres@g-learn.com</span></li>
+                            <li><i class="fa-solid fa-video"></i><a href="https://zoom.us/j/TU-ID-DE-REUNION"
+                                    target="_blank">Clase en Vivo (Zoom)</a></li>
+                        </ul>
+                    </div>
+                    <div class="teacher-footer">
+                        <p>Califica al instructor:</p>
+                        <div class="emojis teacher-rating">
+                            <button class="star" data-value="1"><i
+                                    class="fa-solid fa-face-frown-open face-1"></i></button>
+                            <button class="star" data-value="2"><i class="fa-solid fa-face-frown face-2"></i></button>
+                            <button class="star" data-value="3"><i class="fa-solid fa-face-meh face-3"></i></button>
+                            <button class="star" data-value="4"><i class="fa-solid fa-face-smile face-4"></i></button>
+                            <button class="star" data-value="5"><i
+                                    class="fa-solid fa-face-laugh-beam face-5"></i></button>
+                        </div>
+                        <div id="teacherRatingMsg" class="rating-msg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-class-widget card">
+                <div class="widget-content">
+                    <h4>Siguiente Clase</h4>
+                    <p id="nextClassName">Cargando...</p> <button id="nextClassButton" class="btn-primary full-width">
+                        Empezar Ahora <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="progress-circle-widget card">
+                <div class="widget-content">
+                    <h3>Progreso del Curso</h3>
+                    <div class="circle-wrap">
+                        <canvas id="progressCircle" width="120" height="120"></canvas>
+                        <div class="progress-text-overlay">
+                            <span id="progressPercentage">0%</span>
+                        </div>
+                    </div>
+                    <p id="progressSummary" class="progress-summary">¡Sigue así para completar el curso!</p>
+                </div>
+            </div>
+
+            <div class="widget card">
+                <div class="widget-content">
+                    <h3>Tu Certificado</h3>
+                    <p id="certificateMessage">¡Completa todas las clases y el examen final para obtener tu diploma!</p>
+
+                    <a href="https://docs.google.com/document/d/1WrBzYEwaZKX7UWwCvv9BeyxCdJkF9I1xgpY3E7cKXo4/edit?usp=sharing" id="certificateButton" class="btn-primary disabled"
+                        target="_blank">
+                        Sacar Certificado
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+
+        <footer class="page-footer">
+            <div class="footer-content">
+
+                <div class="footer-column contact-info">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Av. Principal 123, Lima, Perú</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+51 987 654 321</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:soporte@globallearn.com">soporte@globallearn.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column about-info">
+                    <h4>Sobre Global Learn</h4>
+                    <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para
+                        todos los niños.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+
+        <script src="/Andiru/js/script.js"></script>
+
+</body>
+
+</html>

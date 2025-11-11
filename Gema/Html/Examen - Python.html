@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN Python Divertido - Mis Primeros Programas</title>
+    <link rel="stylesheet" href="/Gema/Css/Examen.css">
+</head>
+<body>
+    <button class="close-btn" onclick="window.location.href='/Gema/Html/certificado - Examen.html'">×</button>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h1>Global Learning</h1>
+            </div>
+            <a href="Python Divertido.html" class="back-btn" id="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Atrás
+            </a>
+        </header>
+
+        <div class="exam-info">
+            <div class="exam-info-content">
+                <div class="input-group">
+                    <label for="name-input">Tu nombre:</label>
+                    <input type="text" id="name-input" placeholder="Escribe tu nombre aquí">
+                </div>
+                <div class="question-counter">
+                    Preguntas: 1 al 20
+                </div>
+            </div>
+        </div>
+
+        <div class="exam-form-wrapper">
+            <form id="exam-form">
+                <!-- Pregunta 1 -->
+                <div class="question-block">
+                    <h3>1. ¿Qué es Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="1" data-answer="A">Un lenguaje de programación</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="B">Un tipo de serpiente</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="C">Un videojuego</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="D">Un programa de dibujo</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="question-block">
+                    <h3>2. ¿Qué comando se usa en Python para mostrar texto en pantalla?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="2" data-answer="A">mostrar()</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="B">print()</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="C">escribir()</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="D">decir()</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="question-block">
+                    <h3>3. ¿Qué símbolo se usa en Python para comentarios?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="3" data-answer="A">//</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="B">#</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="C">--</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="D">/*</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="question-block">
+                    <h3>4. ¿Qué palabra clave se usa para crear un bucle en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="4" data-answer="A">repeat</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="B">for</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="C">loop</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="D">while</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="question-block">
+                    <h3>5. ¿Cómo se llama la biblioteca de Python para dibujar gráficos?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="5" data-answer="A">turtle</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="B">draw</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="C">paint</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="D">graphics</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="question-block">
+                    <h3>6. ¿Qué hace la función input() en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="6" data-answer="A">Muestra texto en pantalla</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="B">Lee lo que el usuario escribe</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="C">Hace cálculos matemáticos</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="D">Dibuja en la pantalla</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="question-block">
+                    <h3>7. ¿Qué tipo de datos se usa para texto en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="7" data-answer="A">int</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="B">float</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="C">str</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="D">bool</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="question-block">
+                    <h3>8. ¿Qué operador se usa para sumar en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="8" data-answer="A">+</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="B">-</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="C">*</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="D">/</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="question-block">
+                    <h3>9. ¿Qué palabra clave se usa para definir una función en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="9" data-answer="A">function</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="B">def</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="C">create</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="D">make</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="question-block">
+                    <h3>10. ¿Qué biblioteca se usa para generar números aleatorios en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="10" data-answer="A">random</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="B">math</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="C">number</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="D">chance</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div class="question-block">
+                    <h3>11. ¿Qué hace la función len() en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="11" data-answer="A">Cuenta letras en una palabra</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="B">Mide la longitud de algo</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="C">Cambia mayúsculas y minúsculas</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="D">Suma números</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 12 -->
+                <div class="question-block">
+                    <h3>12. ¿Qué tipo de datos representa verdadero o falso en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="12" data-answer="A">int</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="B">str</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="C">bool</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="D">float</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 13 -->
+                <div class="question-block">
+                    <h3>13. ¿Qué comando se usa para importar una biblioteca en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="13" data-answer="A">use</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="B">include</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="C">import</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="D">require</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 14 -->
+                <div class="question-block">
+                    <h3>14. ¿Qué estructura de datos permite almacenar varios elementos en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="14" data-answer="A">variable</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="B">lista</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="C">número</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="D">texto</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 15 -->
+                <div class="question-block">
+                    <h3>15. ¿Qué palabra clave se usa para condiciones en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="15" data-answer="A">if</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="B">check</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="C">when</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="D">condition</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 16 -->
+                <div class="question-block">
+                    <h3>16. ¿Qué operador se usa para comparar si dos valores son iguales?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="16" data-answer="A">=</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="B">==</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="C">===</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="D">!=</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 17 -->
+                <div class="question-block">
+                    <h3>17. ¿Qué función convierte texto a número en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="17" data-answer="A">str()</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="B">text()</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="C">int()</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="D">number()</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 18 -->
+                <div class="question-block">
+                    <h3>18. ¿Qué hace range(5) en Python?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="18" data-answer="A">Crea una lista de 0 a 4</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="B">Genera 5 números aleatorios</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="C">Dibuja un círculo de radio 5</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="D">Suma 5 números</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 19 -->
+                <div class="question-block">
+                    <h3>19. ¿Qué biblioteca se usa para hacer operaciones matemáticas avanzadas?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="19" data-answer="A">random</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="B">math</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="C">turtle</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="D">time</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 20 -->
+                <div class="question-block">
+                    <h3>20. ¿Qué símbolo se usa para acceder a elementos de una lista?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="20" data-answer="A">()</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="B">[]</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="C">{}</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="D"><></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="submit-section">
+            <button type="submit" id="submit-btn" class="submit-btn">Enviar Examen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

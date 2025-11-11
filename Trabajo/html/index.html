@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Learn - Programación para Niños y Adolescentes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/landing.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>
+                <span>Global Learn</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-nav-login" href="/Gema/Html/login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-nav-register" href="/Gema/Html/registro.html">Comenzar Gratis</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <span class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        Más de 5,000 estudiantes activos
+                    </span>
+                    <h1 class="hero-title">
+                        Aprende a <span class="gradient-text">Programar</span> desde Cero
+                    </h1>
+                    <p class="hero-subtitle">
+                        Cursos diseñados para niños y adolescentes. Scratch, Python, Desarrollo Web y Videojuegos. Aprende a tu ritmo.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/Gema/Html/registro.html" class="btn btn-hero-primary">
+                            Comenzar Gratis
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#cursos" class="btn btn-hero-secondary">
+                            Ver Cursos
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">5K+</div>
+                            <div class="stat-label">Estudiantes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Cursos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.9/5</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="/Trabajo/img/PNG3.png" alt="Programación">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURSOS SECTION -->
+    <section class="cursos" id="cursos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Nuestros Cursos</span>
+                <h2 class="section-title">Descubre lo que puedes aprender</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="curso-card">
+                        <div class="curso-icon"></div>
+                        <h3>Scratch</h3>
+                        <p>Primeros juegos</p>
+                        <span class="curso-edad">8-12 años</span>
+                        <div class="curso-precio">
+                            <span class="precio-antes">s/ 100</span>
+                            <span class="precio-ahora">s/ 50</span>
+                        </div>
+                        <a href="/Rafael/Html/matricula_Pago.html" class="btn btn-curso">Inscribirse</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="curso-card destacado">
+                        <div class="curso-badge">Popular</div>
+                        <div class="curso-icon"></div>
+                        <h3>Python</h3>
+                        <p>Programación divertida</p>
+                        <span class="curso-edad">11-14 años</span>
+                        <div class="curso-precio">
+                            <span class="precio-antes">s/ 120</span>
+                            <span class="precio-ahora">s/ 60</span>
+                        </div>
+                        <a href="/Rafael/Html/matricula_Pago.html" class="btn btn-curso">Inscribirse</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="curso-card">
+                        <div class="curso-icon"></div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Crea tu página web</p>
+                        <span class="curso-edad">12-16 años</span>
+                        <div class="curso-precio">
+                            <span class="precio-antes">s/ 80</span>
+                            <span class="precio-ahora">s/ 50</span>
+                        </div>
+                        <a href="/Rafael/Html/matricula_Pago.html" class="btn btn-curso">Inscribirse</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="curso-card">
+                        <div class="curso-icon"></div>
+                        <h3>Videojuegos 2D</h3>
+                        <p>Desarrolla tus juegos</p>
+                        <span class="curso-edad">12-16 años</span>
+                        <div class="curso-precio">
+                            <span class="precio-antes">s/ 150</span>
+                            <span class="precio-ahora">s/ 100</span>
+                        </div>
+                        <a href="//Rafael/Html/matricula_Pago.html" class="btn btn-curso">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios" id="beneficios">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="/Trabajo/img/PNG1.png" alt="Soporte 24/7" class="benefit-img">
+                </div>
+                <div class="col-lg-6">
+                    <span class="section-badge">¿Por qué Global Learn?</span>
+                    <h2 class="section-title">Aprende con los mejores recursos</h2>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Aprende a tu ritmo</h4>
+                                <p>Acceso de por vida a todos los cursos</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Soporte 24/7</h4>
+                                <p>Resuelve tus dudas en cualquier momento</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Certificado oficial</h4>
+                                <p>Obtén tu certificado al finalizar cada curso</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Proyectos prácticos</h4>
+                                <p>Aprende haciendo proyectos reales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="proceso">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Proceso Simple</span>
+                <h2 class="section-title">Comienza en 3 pasos</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <i class="fas fa-user-plus step-icon"></i>
+                        <h3>Regístrate</h3>
+                        <p>Crea tu cuenta gratis en menos de 1 minuto</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <i class="fas fa-laptop-code step-icon"></i>
+                        <h3>Elige y Aprende</h3>
+                        <p>Selecciona tu curso y comienza a estudiar</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <i class="fas fa-certificate step-icon"></i>
+                        <h3>Certifícate</h3>
+                        <p>Obtén tu certificado oficial al terminar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="precios" id="precios">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Precios</span>
+                <h2 class="section-title">Planes para todos</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <h3>Curso Individual</h3>
+                        <div class="pricing-precio">
+                            <span class="precio-currency">s/</span>
+                            <span class="precio-amount">237</span>
+                            <span class="precio-period">/curso</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Acceso de por vida</li>
+                            <li><i class="fas fa-check"></i> Soporte por chat</li>
+                            <li><i class="fas fa-check"></i> Certificado digital</li>
+                        </ul>
+                        <a href="/Rafael/Html/matricula_Pago.html" class="btn btn-pricing">Comenzar</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card destacado">
+                        <div class="pricing-badge">Más Popular</div>
+                        <h3>Pack 2 Cursos</h3>
+                        <div class="pricing-precio">
+                            <span class="precio-currency">s/</span>
+                            <span class="precio-amount">350</span>
+                            <span class="precio-period">/pack</span>
+                        </div>
+                        <span class="pricing-save">Ahorra s/ 150</span>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 2 cursos a elegir</li>
+                            <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                            <li><i class="fas fa-check"></i> Grupo Discord privado</li>
+                        </ul>
+                        <a href="/Rafael/Html/matricula_Pago.html" class="btn btn-pricing">Comenzar</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <h3>Pack Completo</h3>
+                        <div class="pricing-precio">
+                            <span class="precio-currency">s/</span>
+                            <span class="precio-amount">500</span>
+                            <span class="precio-period">/todos</span>
+                        </div>
+                        <span class="pricing-save">Ahorra s/ 150</span>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Los 4 cursos incluidos</li>
+                            <li><i class="fas fa-check"></i> Mentoría 1 a 1</li>
+                            <li><i class="fas fa-check"></i> Certificado profesional</li>
+                        </ul>
+                        <a href="/Rafael/Html/matricula_Pago.html" class="btn btn-pricing">Comenzar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="/Trabajo/img/PNG2.png" alt="Comienza ahora" class="cta-img">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>¿Listo para comenzar?</h2>
+                        <p>Únete a más de 5,000 estudiantes que ya están aprendiendo</p>
+                        <a href="/Gema/Html/registro.html" class="btn btn-cta">
+                            Regístrate Gratis
+                            <i class="fas fa-rocket ms-2"></i>
+                        </a>
+                        <div class="cta-features">
+                            <span><i class="fas fa-check"></i> Sin tarjeta de crédito</span>
+                            <span><i class="fas fa-check"></i> Cancela cuando quieras</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        <span>Global Learn</span>
+                    </div>
+                    <p>Plataforma educativa que transforma jóvenes en programadores profesionales</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Cursos</h5>
+                    <ul>
+                        <li><a href="#cursos">Scratch</a></li>
+                        <li><a href="#cursos">Python</a></li>
+                        <li><a href="#cursos">Web</a></li>
+                        <li><a href="#cursos">Videojuegos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Empresa</h5>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Soporte</h5>
+                    <ul>
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/Rafael/scripjs/script.js"></script>
+</body>
+</html>

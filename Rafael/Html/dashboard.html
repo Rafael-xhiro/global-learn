@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Global Learn</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="/Trabajo/Css/dashboard.css">
+</head>
+<body>
+
+    <!-- ========================= SIDEBAR ========================= -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <span class="logo-text">Global Learn</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/Rafael/Html/dashboard.html"class="active"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+            <li><a href="/Adrian/Html/ventana_de_clases.html"><i class="fa-solid fa-comments"></i><span>Comentarios</span></a></li>
+            <li><a href="/Rafael/Html/ventana_de_ruta.html"><i class="fa-solid fa-route"></i><span>Mis Rutas</span></a></li>
+            <li><a href="/Adrian/Html/Notas_y_asistencias.html"><i class="fa-solid fa-chart-line"></i><span>Mi Asistencia</span></a></li>
+            <li><a href="/Gema/Html/Certificado - Examen.html"><i class="fa-solid fa-award"></i><span>Certificados</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-bell"></i><span>Notificaciones</span></a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <img src="https://i.pravatar.cc/40" alt="Avatar">
+            <div class="user-info">
+                <span class="user-name">Usuario</span>
+                <span class="user-role">Estudiante</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================= MAIN CONTENT ========================= -->
+    <main class="main-content">
+
+        <!-- ====== HEADER SUPERIOR ====== -->
+        <header class="top-header">
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+
+            <div class="header-welcome">
+                <h1>¡Bienvenido, <span class="user-highlight">Usuario</span>!</h1>
+                <p>Continúa tu camino de aprendizaje</p>
+            </div>
+
+            <div class="header-actions">
+                <button class="btn-icon" data-bs-toggle="modal" data-bs-target="#notificacionesModal">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ====== SECCIÓN ESTADÍSTICAS ====== -->
+        <section class="stats-section container-fluid py-4">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon purple"><i class="fas fa-route"></i></div>
+                        <div class="stat-details"><h3>3</h3><p>Rutas Activas</p></div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="fas fa-book-open"></i></div>
+                        <div class="stat-details"><h3>12</h3><p>Cursos Completados</p></div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i class="fas fa-clock"></i></div>
+                        <div class="stat-details"><h3>48h</h3><p>Tiempo de Estudio</p></div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon yellow"><i class="fas fa-trophy"></i></div>
+                        <div class="stat-details"><h3>5</h3><p>Certificados</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== PROGRESO GENERAL ====== -->
+        <section class="progreso-section container-fluid">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="content-card">
+                        <div class="card-header-custom">
+                            <h3><i class="fas fa-chart-line"></i> Mi Progreso General</h3>
+                            <span class="badge-progress">68% Completado</span>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>Progreso Total</span>
+                                <span class="progress-percentage">68%</span>
+                            </div>
+                            <div class="progress-bar-custom">
+                                <div class="progress-fill" style="width: 68%;"><span class="progress-glow"></span></div>
+                            </div>
+                        </div>
+
+                        <!-- ====== CURSOS EN PROGRESO ====== -->
+                        <div class="cursos-progreso mt-4">
+                            <h4 class="mb-3">Cursos en Progreso</h4>
+
+                            <div class="curso-item">
+                                <div class="curso-info-dash">
+                                    <h5>Scratch - Mis Primeros Juegos</h5>
+                                    <span class="curso-meta">Módulo 4 de 6 • 2h restantes</span>
+                                </div>
+                                <div class="curso-progress">
+                                    <div class="mini-progress"><div class="mini-progress-fill" style="width: 65%;"></div></div>
+                                    <span class="mini-progress-text">65%</span>
+                                </div>
+                            </div>
+
+                            <div class="curso-item">
+                                <div class="curso-info-dash">
+                                    <h5>Python Divertido</h5>
+                                    <span class="curso-meta">Módulo 2 de 8 • 6h restantes</span>
+                                </div>
+                                <div class="curso-progress">
+                                    <div class="mini-progress"><div class="mini-progress-fill" style="width: 30%;"></div></div>
+                                    <span class="mini-progress-text">30%</span>
+                                </div>
+                            </div>
+
+                            <div class="curso-item">
+                                <div class="curso-info-dash">
+                                    <h5>Crea tu Página Web</h5>
+                                    <span class="curso-meta">Módulo 5 de 6 • 1h restante</span>
+                                </div>
+                                <div class="curso-progress">
+                                    <div class="mini-progress"><div class="mini-progress-fill" style="width: 85%;"></div></div>
+                                    <span class="mini-progress-text">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== SIDEBAR DERECHA ====== -->
+                <div class="col-lg-4">
+                    <!-- Próximo Examen -->
+                    <div class="content-card mb-4">
+                        <div class="card-header-custom">
+                            <h3><i class="fas fa-file-alt"></i> Próximo Examen</h3>
+                        </div>
+                        <div class="exam-info">
+                            <div class="exam-date">
+                                <i class="fas fa-calendar-alt"></i> <span>25 de Octubre, 2025</span>
+                            </div>
+                            <h4 class="exam-title">Fundamentos del Desarrollo Web</h4>
+                            <p class="exam-details">Evaluación final del módulo 6</p>
+                            <a href="/Gema/Html/Crea tu Página Web.html" class="btn-exam"><i class="fas fa-arrow-right"></i> Ver Detalles</a>
+                        </div>
+                    </div>
+
+                    <!-- Actividad Reciente -->
+                    <div class="content-card">
+                        <div class="card-header-custom">
+                            <h3><i class="fas fa-history"></i> Actividad Reciente</h3>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon success"><i class="fas fa-check"></i></div>
+                                <div class="activity-details"><p>Completaste el módulo 4</p><span>Hace 2 horas</span></div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon info"><i class="fas fa-comment"></i></div>
+                                <div class="activity-details"><p>Nuevo comentario del profesor</p><span>Hace 5 horas</span></div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon warning"><i class="fas fa-star"></i></div>
+                                <div class="activity-details"><p>Obtuviste un nuevo logro</p><span>Ayer</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== CURSOS RECOMENDADOS ====== -->
+        <section class="recomendados-section container-fluid">
+            <div class="section-header">
+                <h3><i class="fas fa-star"></i> Cursos Recomendados para Ti</h3>
+                <a href="/Rafael/Html/matricula_Pago.html" class="btn-ver-mas">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Curso 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card-dash">
+                        <div class="curso-thumbnail"><span class="badge-nuevo">NUEVO</span></div>
+                        <div class="curso-body">
+                            <h4>Desarrollo de Videojuegos 2D</h4>
+                            <p class="curso-edad">12-16 años</p>
+                            <div class="curso-footer-dash">
+                                <span class="precio">S/ 60</span>
+                                <a href="/Rafael/Html/matricula_Pago.html" class="btn-inscribir">Inscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card-dash">
+                        <div class="curso-thumbnail"><span class="badge-nuevo">NUEVO</span></div>
+                        <div class="curso-body">
+                            <h4>Scratch - Mis Primeros Juegos</h4>
+                            <p class="curso-edad">8-12 años</p>
+                            <div class="curso-footer-dash">
+                                <span class="precio">S/ 60</span>
+                                <a href="/Rafael/Html/matricula_Pago.html" class="btn-inscribir">Inscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card-dash">
+                        <div class="curso-thumbnail"><span class="badge-nuevo">NUEVO</span></div>
+                        <div class="curso-body">
+                            <h4>Crea tu Página Web</h4>
+                            <p class="curso-edad">12-16 años</p>
+                            <div class="curso-footer-dash">
+                                <span class="precio">S/ 50</span>
+                                <a href="/Rafael/Html/matricula_Pago.html" class="btn-inscribir">Inscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card-dash">
+                        <div class="curso-thumbnail"><span class="badge-nuevo">NUEVO</span></div>
+                        <div class="curso-body">
+                            <h4>Python Divertido</h4>
+                            <p class="curso-edad">11-15 años</p>
+                            <div class="curso-footer-dash">
+                                <span class="precio">S/ 100</span>
+                                <a href="/Rafael/Html/matricula_Pago.html" class="btn-inscribir">Inscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== FOOTER ====== -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div class="footer-column contact-info">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Av. Principal 123, Lima, Perú</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+51 987 654 321</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:soporte@globallearn.com">soporte@globallearn.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column about-info">
+                    <h4>Sobre Global Learn</h4>
+                    <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para todos los niños.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ========================= MODAL DE NOTIFICACIONES ========================= -->
+    <div class="modal fade" id="notificacionesModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-bell"></i> Notificaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="notificacion-item no-leida">
+                        <div class="notif-icon success"><i class="fas fa-check-circle"></i></div>
+                        <div class="notif-content">
+                            <h6>¡Curso completado!</h6>
+                            <p>Has completado exitosamente "HTML y CSS Básico"</p>
+                            <span class="notif-time">Hace 1 hora</span>
+                        </div>
+                    </div>
+                    <div class="notificacion-item no-leida">
+                        <div class="notif-icon info"><i class="fas fa-book"></i></div>
+                        <div class="notif-content">
+                            <h6>Nuevo módulo disponible</h6>
+                            <p>Ya puedes acceder al módulo 5 de "Programación en Python"</p>
+                            <span class="notif-time">Hace 3 horas</span>
+                        </div>
+                    </div>
+                    <div class="notificacion-item no-leida">
+                        <div class="notif-icon warning"><i class="fas fa-comment"></i></div>
+                        <div class="notif-content">
+                            <h6>Nuevo comentario</h6>
+                            <p>Tu profesor dejó un comentario en tu proyecto final</p>
+                            <span class="notif-time">Hace 5 horas</span>
+                        </div>
+                    </div>
+                    <div class="notificacion-item">
+                        <div class="notif-icon"><i class="fas fa-calendar"></i></div>
+                        <div class="notif-content">
+                            <h6>Recordatorio de examen</h6>
+                            <p>Tu examen de "Desarrollo Web" es en 3 días</p>
+                            <span class="notif-time">Ayer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/Rafael/scripjs/script.js"></script>
+</body>
+</html>

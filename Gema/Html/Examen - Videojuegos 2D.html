@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN Desarrollo de Videojuegos 2D - Para Niños</title>
+    <link rel="stylesheet" href="/Gema/Css/Examen.css">
+</head>
+<body>
+    <button class="close-btn" onclick="window.location.href='/Gema/Html/certificado - Examen.html'">×</button>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h1>Global Learning</h1>
+            </div>
+            <a href="Desarrollo de Videojuegos 2D.html" class="back-btn" id="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Atrás
+            </a>
+        </header>
+
+        <div class="exam-info">
+            <div class="exam-info-content">
+                <div class="input-group">
+                    <label for="name-input">Tu nombre:</label>
+                    <input type="text" id="name-input" placeholder="Escribe tu nombre aquí">
+                </div>
+                <div class="question-counter">
+                    Preguntas: 1 al 20
+                </div>
+            </div>
+        </div>
+
+        <div class="exam-form-wrapper">
+            <form id="exam-form">
+                <!-- Pregunta 1 -->
+                <div class="question-block">
+                    <h3>1. ¿Qué es un videojuego 2D?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="1" data-answer="A">Un juego donde todo se ve plano, como un dibujo</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="B">Un juego con gráficos en 3D</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="C">Un juego de realidad virtual</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="D">Un juego de mesa</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="question-block">
+                    <h3>2. ¿Qué significa "plataformas" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="2" data-answer="A">Las consolas donde se juega</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="B">Superficies donde el personaje puede saltar y caminar</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="C">Los programas para crear juegos</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="D">Los controles del juego</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="question-block">
+                    <h3>3. ¿Qué es un "sprite" en un videojuego 2D?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="3" data-answer="A">Un tipo de música</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="B">Un personaje o objeto del juego</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="C">Un efecto especial</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="D">Una pantalla de inicio</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="question-block">
+                    <h3>4. ¿Qué es la "física" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="4" data-answer="A">La asignatura de ciencias</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="B">Las reglas que controlan cómo se mueven los objetos</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="C">La velocidad del juego</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="D">Los gráficos del juego</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="question-block">
+                    <h3>5. ¿Qué es un "enemigo" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="5" data-answer="A">Un personaje que ayuda al jugador</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="B">Un personaje que dificulta el progreso del jugador</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="C">Un objeto que da puntos</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="D">Un tipo de plataforma</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="question-block">
+                    <h3>6. ¿Qué son los "poderes" o "power-ups" en un juego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="6" data-answer="A">Objetos que quitan vida al jugador</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="B">Objetos que dan habilidades especiales al jugador</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="C">Los controles del juego</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="D">Los enemigos más fuertes</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="question-block">
+                    <h3>7. ¿Qué es un "nivel" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="7" data-answer="A">La dificultad del juego</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="B">Una parte específica del juego con sus propios desafíos</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="C">El sonido del juego</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="D">La pantalla de pausa</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="question-block">
+                    <h3>8. ¿Qué es un "jefe final" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="8" data-answer="A">El primer enemigo del juego</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="B">Un enemigo especial que aparece al final de un nivel o juego</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="C">El personaje principal</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="D">La pantalla de título</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="question-block">
+                    <h3>9. ¿Qué significa "vidas" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="9" data-answer="A">Las veces que puedes fallar antes de perder</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="B">Los puntos que consigues</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="C">Los enemigos que derrotas</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="D">Los niveles que completas</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="question-block">
+                    <h3>10. ¿Qué es un "coleccionable" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="10" data-answer="A">Un objeto que el jugador debe encontrar y recoger</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="B">Un tipo de enemigo</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="C">Una plataforma móvil</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="D">Un efecto de sonido</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div class="question-block">
+                    <h3>11. ¿Qué es la "pantalla de inicio" de un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="11" data-answer="A">La primera pantalla que ves al abrir el juego</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="B">La pantalla cuando pierdes</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="C">La pantalla de configuración</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="D">La pantalla de pausa</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 12 -->
+                <div class="question-block">
+                    <h3>12. ¿Qué significa "game over"?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="12" data-answer="A">El juego ha terminado (generalmente porque has perdido)</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="B">Has ganado el juego</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="C">El juego está en pausa</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="D">Has pasado de nivel</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 13 -->
+                <div class="question-block">
+                    <h3>13. ¿Qué es un "obstáculo" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="13" data-answer="A">Algo que ayuda al jugador</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="B">Algo que el jugador debe evitar o superar</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="C">Un tipo de power-up</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="D">La música de fondo</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 14 -->
+                <div class="question-block">
+                    <h3>14. ¿Qué es un "puzzle" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="14" data-answer="A">Un tipo de enemigo</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="B">Un reto que requiere pensar para resolverlo</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="C">La pantalla de título</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="D">Un efecto visual</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 15 -->
+                <div class="question-block">
+                    <h3>15. ¿Qué significa "reiniciar" un nivel?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="15" data-answer="A">Pasar al siguiente nivel</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="B">Empezar el nivel desde el principio</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="C">Guardar el progreso</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="D">Cambiar la dificultad</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 16 -->
+                <div class="question-block">
+                    <h3>16. ¿Qué es un "checkpoint" en un videojuego?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="16" data-answer="A">Un punto donde el juego guarda tu progreso</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="B">El final del juego</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="C">Un tipo de enemigo</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="D">La pantalla de pausa</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 17 -->
+                <div class="question-block">
+                    <h3>17. ¿Qué es la "pantalla de puntuación"?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="17" data-answer="A">Donde se muestran los puntos que has conseguido</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="B">La primera pantalla del juego</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="C">La configuración de sonido</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="D">El menú de pausa</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 18 -->
+                <div class="question-block">
+                    <h3>18. ¿Qué es un "videojuego de desplazamiento lateral"?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="18" data-answer="A">Un juego que se ve desde arriba</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="B">Un juego donde la cámara se mueve horizontalmente</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="C">Un juego de carreras</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="D">Un juego de rompecabezas</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 19 -->
+                <div class="question-block">
+                    <h3>19. ¿Qué es un "videojuego de disparos" (shooter)?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="19" data-answer="A">Un juego donde disparas a objetivos o enemigos</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="B">Un juego de carreras</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="C">Un juego de plataformas</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="D">Un juego de deportes</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 20 -->
+                <div class="question-block">
+                    <h3>20. ¿Qué es un "videojuego de aventuras"?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="20" data-answer="A">Un juego donde exploras, resuelves puzzles y sigues una historia</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="B">Un juego de carreras</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="C">Un juego de deportes</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="D">Un juego de matemáticas</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="submit-section">
+            <button type="submit" id="submit-btn" class="submit-btn">Enviar Examen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

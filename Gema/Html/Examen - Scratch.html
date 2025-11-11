@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN Scratch - Mis Primeros Juegos</title>
+    <link rel="stylesheet" href="/Gema/Css/Examen.css">
+</head>
+<body>
+    <button class="close-btn" onclick="window.location.href='/Gema/Html/certificado - Examen.html'">×</button>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h1>Global Learning</h1>
+            </div>
+            <a href="Scratch - Mis Primeros Juegos.html" class="back-btn" id="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Atrás
+            </a>
+        </header>
+
+        <div class="exam-info">
+            <div class="exam-info-content">
+                <div class="input-group">
+                    <label for="name-input">Tu nombre:</label>
+                    <input type="text" id="name-input" placeholder="Escribe tu nombre aquí">
+                </div>
+                <div class="question-counter">
+                    Preguntas: 1 al 20
+                </div>
+            </div>
+        </div>
+
+        <div class="exam-form-wrapper">
+            <form id="exam-form">
+                <!-- Pregunta 1 -->
+                <div class="question-block">
+                    <h3>1. ¿Qué es Scratch?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="1" data-answer="A">Un lenguaje de programación visual</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="B">Un videojuego</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="C">Un sitio web de videos</button>
+                        <button type="button" class="answer-btn" data-question="1" data-answer="D">Una aplicación de dibujo</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="question-block">
+                    <h3>2. ¿Qué tipo de bloques se utilizan en Scratch?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="2" data-answer="A">Bloques de construcción</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="B">Bloques de código visual</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="C">Bloques de texto</button>
+                        <button type="button" class="answer-btn" data-question="2" data-answer="D">Bloques numéricos</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="question-block">
+                    <h3>3. ¿Qué hace el bloque 'ir a x: 0 y: 0'?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="3" data-answer="A">Mueve el objeto a la posición central</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="B">Cambia el tamaño del objeto</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="C">Cambia el color del objeto</button>
+                        <button type="button" class="answer-btn" data-question="3" data-answer="D">Hace girar el objeto</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="question-block">
+                    <h3>4. ¿Qué bloque se utiliza para hacer que un objeto se mueva?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="4" data-answer="A">Bloque 'decir'</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="B">Bloque 'mover 10 pasos'</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="C">Bloque 'cambiar color'</button>
+                        <button type="button" class="answer-btn" data-question="4" data-answer="D">Bloque 'esperar'</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="question-block">
+                    <h3>5. ¿Cómo se llama el área donde se colocan los bloques en Scratch?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="5" data-answer="A">Área de diseño</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="B">Área de bloques</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="C">Área de trabajo</button>
+                        <button type="button" class="answer-btn" data-question="5" data-answer="D">Área de código</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="question-block">
+                    <h3>6. ¿Qué hace el bloque 'al hacer clic en bandera verde'?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="6" data-answer="A">Detiene el programa</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="B">Inicia el programa</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="C">Cambia el fondo</button>
+                        <button type="button" class="answer-btn" data-question="6" data-answer="D">Añade un objeto</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="question-block">
+                    <h3>7. ¿Qué sección de bloques se utiliza para controlar el flujo del programa?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="7" data-answer="A">Movimiento</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="B">Apariencia</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="C">Control</button>
+                        <button type="button" class="answer-btn" data-question="7" data-answer="D">Sonido</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="question-block">
+                    <h3>8. ¿Qué bloque se utiliza para repetir acciones varias veces?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="8" data-answer="A">Bloque 'si... entonces'</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="B">Bloque 'repetir'</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="C">Bloque 'esperar'</button>
+                        <button type="button" class="answer-btn" data-question="8" data-answer="D">Bloque 'detener'</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="question-block">
+                    <h3>9. ¿Qué hace el bloque 'tocar color'?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="9" data-answer="A">Cambia el color del objeto</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="B">Detecta si el objeto toca un color específico</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="C">Reproduce un sonido</button>
+                        <button type="button" class="answer-btn" data-question="9" data-answer="D">Cambia el fondo</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="question-block">
+                    <h3>10. ¿Cómo se llama el objeto principal en Scratch?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="10" data-answer="A">Gato</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="B">Personaje</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="C">Sprite</button>
+                        <button type="button" class="answer-btn" data-question="10" data-answer="D">Actor</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div class="question-block">
+                    <h3>11. ¿Qué bloque se utiliza para hacer que un objeto hable?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="11" data-answer="A">Bloque 'pensar'</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="B">Bloque 'decir'</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="C">Bloque 'gritar'</button>
+                        <button type="button" class="answer-btn" data-question="11" data-answer="D">Bloque 'susurrar'</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 12 -->
+                <div class="question-block">
+                    <h3>12. ¿Qué tecla se presiona para probar el programa en Scratch?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="12" data-answer="A">Tecla Enter</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="B">Tecla Espacio</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="C">Bandera verde</button>
+                        <button type="button" class="answer-btn" data-question="12" data-answer="D">Tecla Esc</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 13 -->
+                <div class="question-block">
+                    <h3>13. ¿Qué bloque se utiliza para cambiar el fondo del escenario?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="13" data-answer="A">Bloque 'cambiar disfraz'</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="B">Bloque 'siguiente fondo'</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="C">Bloque 'cambiar color'</button>
+                        <button type="button" class="answer-btn" data-question="13" data-answer="D">Bloque 'mover'</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 14 -->
+                <div class="question-block">
+                    <h3>14. ¿Qué significa el bloque 'esperar 1 segundo'?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="14" data-answer="A">Detiene el programa por 1 segundo</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="B">Acelera el programa por 1 segundo</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="C">Hace que el objeto espere 1 segundo antes de continuar</button>
+                        <button type="button" class="answer-btn" data-question="14" data-answer="D">Cambia el temporizador a 1 segundo</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 15 -->
+                <div class="question-block">
+                    <h3>15. ¿Qué bloque se utiliza para detectar si se presiona una tecla?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="15" data-answer="A">Bloque 'al hacer clic'</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="B">Bloque 'al presionar tecla'</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="C">Bloque 'al tocar'</button>
+                        <button type="button" class="answer-btn" data-question="15" data-answer="D">Bloque 'al recibir mensaje'</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 16 -->
+                <div class="question-block">
+                    <h3>16. ¿Qué significa que Scratch es un lenguaje de programación visual?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="16" data-answer="A">Que se programa con palabras</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="B">Que se programa arrastrando bloques</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="C">Que solo se ven imágenes</button>
+                        <button type="button" class="answer-btn" data-question="16" data-answer="D">Que no necesita instrucciones</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 17 -->
+                <div class="question-block">
+                    <h3>17. ¿Para qué sirve el bloque 'apuntar en dirección'?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="17" data-answer="A">Para cambiar el tamaño del objeto</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="B">Para girar el objeto hacia una dirección</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="C">Para cambiar el color del objeto</button>
+                        <button type="button" class="answer-btn" data-question="17" data-answer="D">Para mover el objeto más rápido</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 18 -->
+                <div class="question-block">
+                    <h3>18. ¿Qué hace el bloque 'rebotar si toca un borde'?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="18" data-answer="A">Hace que el objeto desaparezca</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="B">Hace que el objeto cambie de color al tocar el borde</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="C">Hace que el objeto rebote cuando toca el borde de la pantalla</button>
+                        <button type="button" class="answer-btn" data-question="18" data-answer="D">Detiene el programa</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 19 -->
+                <div class="question-block">
+                    <h3>19. ¿Qué es un 'disfraz' en Scratch?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="19" data-answer="A">Un sonido que reproduce el objeto</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="B">Una apariencia diferente del objeto</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="C">Un tipo de bloque</button>
+                        <button type="button" class="answer-btn" data-question="19" data-answer="D">Un fondo del escenario</button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 20 -->
+                <div class="question-block">
+                    <h3>20. ¿Para qué sirve el bloque 'deslizar en segundos a'?</h3>
+                    <div class="options">
+                        <button type="button" class="answer-btn" data-question="20" data-answer="A">Para mover el objeto instantáneamente</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="B">Para hacer que el objeto se mueva suavemente durante un tiempo</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="C">Para cambiar el tamaño del objeto</button>
+                        <button type="button" class="answer-btn" data-question="20" data-answer="D">Para reproducir un sonido largo</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="submit-section">
+            <button type="submit" id="submit-btn" class="submit-btn">Enviar Examen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.descripcion {
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 1.7;
+    max-width: 70ch;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+}
+
+.rating {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.rating p {
+    margin: 0 0 10px;
+    font-weight: 500;
+    color: #a8f3bf;
+}
+
+.unidades-curso {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.unidad-card {
+    background-color: #202225;
+    border-radius: 12px;
+    border: 1px solid #36393f;
+    transition: all 0.3s ease;
+}
+
+.unidad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.unidad-card:not(.is-locked):hover .unidad-header {
+    background-color: #313338;
+}
+
+.unidad-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.unidad-numero {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+}
+
+.unidad-titulo {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.chevron-icon {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    transition: transform 0.3s ease;
+}
+
+.unidad-card.is-open .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.unidad-card.is-locked {
+
+    opacity: 0.6;
+}
+
+.unidad-card.is-locked .unidad-header {
+    cursor: not-allowed;
+}
+
+.unidad-card.is-locked .unidad-titulo,
+.unidad-card.is-locked .unidad-numero {
+    color: var(--color-text-muted);
+}
+
+.lock-icon {
+    font-size: 16px;
+    color: #e74c3c;
+}
+
+.unidad-body {
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid #36393f;
+}
+
+.lista-lecciones {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.lista-lecciones li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    color: var(--color-text-muted);
+}
+
+.lista-lecciones li span {
+    transition: color 0.2s;
+}
+
+.lista-lecciones li:hover span {
+    color: var(--color-text);
+}
+
+.lista-lecciones .status-icon {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.lista-lecciones .status-icon.completed {
+    color: var(--color-primary);
+}
+
+.lista-lecciones li a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lista-lecciones li a:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.lista-lecciones li a.open-modal-video {
+    cursor: pointer;
+}
+
+.lista-lecciones li a[target="_blank"]::after {
+    content: '\f35d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 12px;
+    margin-left: 8px;
+    opacity: 0.6;
+}
+
+.lista-lecciones li .upload-link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.lista-lecciones li .upload-link:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.lista-lecciones li .upload-link::after {
+    content: '\f093';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 12px;
+    margin-left: 8px;
+    opacity: 0.6;
+}
+
+.hidden-file-input {
+    display: none;
+}

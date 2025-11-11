@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Introducción a la Web - Global Learn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/videoclase.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <span class="logo-text">Global Learn</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Rafael/Html/dashboard.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+            <li><a href="/Adrian/Html/ventana_de_clases.html"><i class="fa-solid fa-comments"></i><span>Comentarios</span></a></li>
+            <li><a href="/Rafael/Html/ventana_de_ruta.html" class="active"><i class="fa-solid fa-route"></i><span>Mis Rutas</span></a></li>
+            <li><a href="/Adrian/Html/Notas_y_asistencias.html"><i class="fa-solid fa-chart-line"></i><span>Mi Asistencia</span></a></li>
+            <li><a href="/Gema/Html/Certificado - Examen.html"><i class="fa-solid fa-award"></i><span>Certificados</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-bell"></i><span>Notificaciones</span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <img src="https://i.pravatar.cc/40" alt="Avatar">
+            <div class="user-info">
+                <span class="user-name">Usuario</span>
+                <span class="user-role">Estudiante</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span>Introducción a la Web</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon" title="Favorito">
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-icon" id="toggleComments" title="Comentarios">
+                    <i class="fas fa-comments"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Course Container -->
+        <div class="course-container">
+            <!-- Video Section -->
+            <section class="video-section">
+                <div class="video-wrapper">
+                    <video controls poster="practica.png">
+                        <source src="video.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+                
+                <div class="video-info-card">
+                    <div class="video-header">
+                        <div>
+                            <h1 class="course-title">Curso de Introducción a la Web</h1>
+                            <div class="course-meta">
+                                <span class="instructor">
+                                    <i class="fas fa-user-circle"></i>
+                                    <strong>Diego de Granda</strong>
+                                </span>
+                                <span class="duration">
+                                    <i class="fas fa-clock"></i>
+                                    45 minutos
+                                </span>
+                                <span class="level">
+                                    <i class="fas fa-signal"></i>
+                                    Principiante
+                                </span>
+                            </div>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn-secondary">
+                                <i class="fas fa-bookmark"></i>
+                                Guardar
+                            </button>
+                            <button class="btn-primary">
+                                <i class="fas fa-play"></i>
+                                Continuar Curso
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-bar-container">
+                        <div class="progress-info">
+                            <span>Progreso del curso</span>
+                            <span class="progress-percentage">35%</span>
+                        </div>
+                        <div class="progress-bar-custom">
+                            <div class="progress-fill" style="width: 35%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Content Tabs -->
+            <section class="content-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="descripcion">
+                        <i class="fas fa-info-circle"></i>
+                        Descripción
+                    </button>
+                    <button class="tab-btn" data-tab="contenido">
+                        <i class="fas fa-list"></i>
+                        Contenido
+                    </button>
+                    <button class="tab-btn" data-tab="recursos">
+                        <i class="fas fa-download"></i>
+                        Recursos
+                    </button>
+                </div>
+
+                <div class="tabs-content">
+                    <!-- Tab Descripción -->
+                    <div class="tab-panel active" id="descripcion">
+                        <div class="lesson-section">
+                            <h2><i class="fas fa-graduation-cap"></i> ¿Qué aprenderás en este curso?</h2>
+                            <p>
+                                Bienvenido al apasionante mundo de la web y el Internet. En este curso aprenderás la historia del Internet
+                                desde sus orígenes hasta las tecnologías modernas que lo hacen posible.
+                            </p>
+                            <p>
+                                Comprenderás los fundamentos que permiten que los sitios web funcionen, cómo se conectan los dispositivos 
+                                y cómo la información viaja por la red.
+                            </p>
+                            
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Historia del Internet</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Protocolos de red</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Arquitectura web</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>DNS y hosting</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2><i class="fas fa-history"></i> ¿De dónde proviene el Internet?</h2>
+                            <p>
+                                Internet ha evolucionado a través de una serie de hitos y tecnologías. Conoceremos los primeros
+                                experimentos, las redes que dieron origen al Internet moderno y cómo este ha cambiado la forma en que nos
+                                comunicamos, trabajamos y aprendemos.
+                            </p>
+                            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>1969 - ARPANET</h4>
+                                        <p>Primera red de computadoras</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>1989 - World Wide Web</h4>
+                                        <p>Tim Berners-Lee inventa la WWW</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>2000s - Era moderna</h4>
+                                        <p>Explosión de servicios web</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Contenido -->
+                    <div class="tab-panel" id="contenido">
+                        <div class="lesson-section">
+                            <h2><i class="fas fa-book"></i> Módulos del Curso</h2>
+                            <div class="modules-list">
+                                <div class="module-item completed">
+                                    <div class="module-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h4>Módulo 1: Introducción</h4>
+                                        <p>5 lecciones • 1h 30min</p>
+                                    </div>
+                                </div>
+                                <div class="module-item active">
+                                    <div class="module-icon">
+                                        <i class="fas fa-play-circle"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h4>Módulo 2: Historia del Internet</h4>
+                                        <p>8 lecciones • 2h 15min</p>
+                                    </div>
+                                </div>
+                                <div class="module-item">
+                                    <div class="module-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h4>Módulo 3: Protocolos Web</h4>
+                                        <p>6 lecciones • 1h 45min</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Recursos -->
+                    <div class="tab-panel" id="recursos">
+                        <div class="lesson-section">
+                            <h2><i class="fas fa-folder-open"></i> Recursos Descargables</h2>
+                            <div class="resources-list">
+                                <div class="resource-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div class="resource-info">
+                                        <h4>Apuntes del Curso.pdf</h4>
+                                        <span>2.5 MB</span>
+                                    </div>
+                                    <button class="btn-download">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                                <div class="resource-item">
+                                    <i class="fas fa-file-code"></i>
+                                    <div class="resource-info">
+                                        <h4>Ejemplos de Código.zip</h4>
+                                        <span>5.8 MB</span>
+                                    </div>
+                                    <button class="btn-download">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div class="footer-column contact-info">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Av. Principal 123, Lima, Perú</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+51 987 654 321</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:soporte@globallearn.com">soporte@globallearn.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column about-info">
+                    <h4>Sobre Global Learn</h4>
+                    <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para todos los niños.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Comments Panel -->
+    <aside class="comments-panel" id="commentsPanel">
+        <div class="comments-header">
+            <h3><i class="fas fa-comments"></i> Comentarios</h3>
+            <button class="comments-close" id="closeComments" title="Cerrar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="comments-list">
+            <article class="comment">
+                <div class="avatar">SD</div>
+                <div class="comment-body">
+                    <div class="comment-meta">
+                        <strong>Sebastián</strong>
+                        <small>· 2h</small>
+                    </div>
+                    <p>Muy buen curso, me está ayudando mucho.</p>
+                    <div class="comment-actions">
+                        <button><i class="far fa-thumbs-up"></i> 5</button>
+                        <button><i class="far fa-comment"></i> Responder</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="comment">
+                <div class="avatar">OC</div>
+                <div class="comment-body">
+                    <div class="comment-meta">
+                        <strong>Oscar</strong>
+                        <small>· 1d</small>
+                    </div>
+                    <p>¿Dónde puedo descargar los apuntes?</p>
+                    <div class="comment-actions">
+                        <button><i class="far fa-thumbs-up"></i> 2</button>
+                        <button><i class="far fa-comment"></i> Responder</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="comment">
+                <div class="avatar">MB</div>
+                <div class="comment-body">
+                    <div class="comment-meta">
+                        <strong>María</strong>
+                        <small>· 3d</small>
+                    </div>
+                    <p>Excelente explicación sobre los orígenes de Internet.</p>
+                    <div class="comment-actions">
+                        <button><i class="far fa-thumbs-up"></i> 8</button>
+                        <button><i class="far fa-comment"></i> Responder</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="comment-input">
+            <textarea placeholder="Escribe un comentario..." rows="3"></textarea>
+            <button type="button">
+                <i class="fas fa-paper-plane"></i>
+                Enviar
+            </button>
+        </div>
+    </aside>
+
+    <script>
+        // Toggle Sidebar
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        // Toggle Comments Panel
+        document.getElementById('toggleComments').addEventListener('click', function() {
+            document.getElementById('commentsPanel').classList.toggle('active');
+        });
+
+        document.getElementById('closeComments').addEventListener('click', function() {
+            document.getElementById('commentsPanel').classList.remove('active');
+        });
+
+        // Tabs functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+                
+                button.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
