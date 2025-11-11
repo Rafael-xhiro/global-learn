@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula y Pago - Global Learn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/rafael/matricula_Pago.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap"></i> Global Learn
+            </a>
+            <a href="dashboard.html" class="btn btn-outline-success">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Título -->
+        <div class="text-center mb-5">
+            <h1 class="titulo-principal">Matrícula y Pago</h1>
+            <p class="subtitulo">Selecciona tu curso y completa tu matrícula</p>
+        </div>
+
+        <!-- Progress Steps -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="progress-steps">
+                    <div class="step active" id="step1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Seleccionar Curso</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" id="step2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Datos Personales</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" id="step3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Método de Pago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paso 1: Selección de Curso -->
+        <div id="paso1" class="paso-container">
+            <h2 class="mb-4">Nuestros Cursos</h2>
+            <div class="row g-4">
+                <!-- Curso 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card" data-curso="1">
+                        <span class="badge-nuevo">NUEVO</span>
+                        <div class="curso-icon">🎮</div>
+                        <h3 class="curso-titulo">Scratch - Mis Primeros Juegos</h3>
+                        <p class="curso-edad">8-12 años</p>
+                        <div class="curso-info">
+                            <p><i class="fas fa-clock"></i> 16 horas</p>
+                        </div>
+                        <div class="curso-precio">
+                            <span class="precio-anterior">s/ 279</span>
+                            <span class="precio-actual">s/ 237</span>
+                        </div>
+                        <button class="btn btn-seleccionar" onclick="seleccionarCurso(1)">
+                            <i class="fas fa-shopping-cart"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card" data-curso="2">
+                        <span class="badge-nuevo">NUEVO</span>
+                        <div class="curso-icon">🐍</div>
+                        <h3 class="curso-titulo">Python Divertido</h3>
+                        <p class="curso-edad">11-14 años</p>
+                        <div class="curso-info">
+                            <p><i class="fas fa-clock"></i> 20 horas</p>
+                        </div>
+                        <div class="curso-precio">
+                            <span class="precio-anterior">s/ 339</span>
+                            <span class="precio-actual">s/ 287</span>
+                        </div>
+                        <button class="btn btn-seleccionar" onclick="seleccionarCurso(2)">
+                            <i class="fas fa-shopping-cart"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Curso 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card" data-curso="3">
+                        <span class="badge-nuevo">NUEVO</span>
+                        <div class="curso-icon">🌐</div>
+                        <h3 class="curso-titulo">Crea tu Página Web</h3>
+                        <p class="curso-edad">12-16 años</p>
+                        <div class="curso-info">
+                            <p><i class="fas fa-clock"></i> 18 horas</p>
+                        </div>
+                        <div class="curso-precio">
+                            <span class="precio-anterior">s/ 319</span>
+                            <span class="precio-actual">s/ 267</span>
+                        </div>
+                        <button class="btn btn-seleccionar" onclick="seleccionarCurso(3)">
+                            <i class="fas fa-shopping-cart"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Curso 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="curso-card" data-curso="4">
+                        <span class="badge-nuevo">NUEVO</span>
+                        <div class="curso-icon">🎯</div>
+                        <h3 class="curso-titulo">Desarrollo de Videojuegos 2D</h3>
+                        <p class="curso-edad">12-16 años</p>
+                        <div class="curso-info">
+                            <p><i class="fas fa-clock"></i> 24 horas</p>
+                        </div>
+                        <div class="curso-precio">
+                            <span class="precio-anterior">s/ 399</span>
+                            <span class="precio-actual">s/ 337</span>
+                        </div>
+                        <button class="btn btn-seleccionar" onclick="seleccionarCurso(4)">
+                            <i class="fas fa-shopping-cart"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paso 2: Datos Personales -->
+        <div id="paso2" class="paso-container" style="display: none;">
+            <h2 class="mb-4">Datos de Matrícula</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="form-card">
+                        <h4 class="mb-4"><i class="fas fa-user-graduate"></i> Datos del Estudiante</h4>
+                        <form id="formDatos">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Nombres *</label>
+                                    <input type="text" class="form-control" name="nombre" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Apellidos *</label>
+                                    <input type="text" class="form-control" name="apellido" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Edad *</label>
+                                    <input type="number" class="form-control" name="edad" min="8" max="16" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+                            
+                            <h4 class="mb-4"><i class="fas fa-user-tie"></i> Datos del Padre/Tutor</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Nombre Completo *</label>
+                                    <input type="text" class="form-control" name="nombrePadre" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Teléfono *</label>
+                                    <input type="tel" class="form-control" name="telefonoPadre" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mt-4">
+                                <button type="button" class="btn btn-secondary" onclick="volverPaso(1)">
+                                    <i class="fas fa-arrow-left"></i> Volver
+                                </button>
+                                <button type="button" class="btn btn-primary" onclick="siguientePaso(3)">
+                                    Continuar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paso 3: Método de Pago -->
+        <div id="paso3" class="paso-container" style="display: none;">
+            <h2 class="mb-4">Método de Pago</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Opciones de Pago -->
+                    <div class="metodos-pago mb-4">
+                        <div class="metodo-card" onclick="seleccionarMetodo('tarjeta')">
+                            <i class="fas fa-credit-card"></i>
+                            <h5>Tarjeta de Crédito/Débito</h5>
+                            <p>Visa, Mastercard, American Express</p>
+                        </div>
+                        <div class="metodo-card" onclick="seleccionarMetodo('yape')">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h5>Yape</h5>
+                            <p>Pago mediante código QR</p>
+                        </div>
+                    </div>
+
+                    <!-- Formulario Tarjeta -->
+                    <div id="form-tarjeta" class="form-card" style="display: none;">
+                        <h4 class="mb-4"><i class="fas fa-credit-card"></i> Datos de la Tarjeta</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Número de Tarjeta *</label>
+                                <input type="text" class="form-control" maxlength="19" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Fecha de Vencimiento *</label>
+                                    <input type="text" class="form-control" placeholder="MM/AA" maxlength="5">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">CVV *</label>
+                                    <input type="text" class="form-control" maxlength="3" placeholder="123">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Nombre en la Tarjeta *</label>
+                                <input type="text" class="form-control" placeholder="Como aparece en la tarjeta">
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">
+                                <i class="fas fa-lock"></i> Pagar Ahora
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Formulario Yape -->
+                    <div id="form-yape" class="form-card" style="display: none;">
+                        <h4 class="mb-4"><i class="fas fa-mobile-alt"></i> Pagar con Yape</h4>
+                        <div class="text-center">
+                            <div class="qr-container mb-4">
+                                <img src="/img/qr-yape.png.jpeg" alt="QR Yape" class="qr-code">
+                                <p class="mt-3">Escanea el código QR con tu app Yape</p>
+                            </div>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle"></i>
+                                <strong>Instrucciones:</strong>
+                                <ol class="text-start mt-2 mb-0">
+                                    <li>Abre tu app Yape</li>
+                                    <li>Escanea el código QR</li>
+                                    <li>Confirma el pago de <strong id="monto-yape">s/ 237</strong></li>
+                                    <li>Envía tu comprobante al WhatsApp: <strong>924 822 937</strong></li>
+                                </ol>
+                            </div>
+                            <button class="btn btn-success w-100" onclick="confirmarPago()">
+                                <i class="fas fa-check"></i> Ya realicé el pago
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="button" class="btn btn-secondary" onclick="volverPaso(2)">
+                            <i class="fas fa-arrow-left"></i> Volver
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resumen del Pedido -->
+                <div class="col-lg-4">
+                    <div class="resumen-card">
+                        <h4 class="mb-4"><i class="fas fa-shopping-cart"></i> Resumen del Pedido</h4>
+                        <div id="resumen-curso">
+                            <p class="curso-seleccionado" id="nombre-curso-resumen">-</p>
+                            <div class="resumen-detalle">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">s/ 0</span>
+                            </div>
+                            <div class="resumen-detalle">
+                                <span>Descuento:</span>
+                                <span class="texto-verde" id="descuento">- s/ 0</span>
+                            </div>
+                            <hr>
+                            <div class="resumen-total">
+                                <span>Total:</span>
+                                <span id="total">s/ 0</span>
+                            </div>
+                        </div>
+                        <div class="garantia-card mt-4">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Garantía de satisfacción 100%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="check-icon mb-4">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="mb-3">¡Matrícula Exitosa!</h3>
+                    <p class="mb-4">Tu matrícula ha sido procesada correctamente. Recibirás un email de confirmación con los detalles de acceso.</p>
+                    <a href="dashboard.html" class="btn btn-success">
+                        <i class="fas fa-home"></i> Ir al Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Datos de los cursos
+        const cursos = {
+            1: {
+                nombre: 'Scratch - Mis Primeros Juegos',
+                precio: 237,
+                precioOriginal: 279,
+                descuento: 42
+            },
+            2: {
+                nombre: 'Python Divertido',
+                precio: 287,
+                precioOriginal: 339,
+                descuento: 52
+            },
+            3: {
+                nombre: 'Crea tu Página Web',
+                precio: 267,
+                precioOriginal: 319,
+                descuento: 52
+            },
+            4: {
+                nombre: 'Desarrollo de Videojuegos 2D',
+                precio: 337,
+                precioOriginal: 399,
+                descuento: 62
+            }
+        };
+
+        // Variable global para el curso seleccionado
+        let cursoSeleccionado = null;
+
+        // Función para seleccionar curso
+        function seleccionarCurso(idCurso) {
+            cursoSeleccionado = idCurso;
+            
+            // Remover selección previa
+            document.querySelectorAll('.curso-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Marcar el curso seleccionado
+            const cardSeleccionada = document.querySelector(`.curso-card[data-curso="${idCurso}"]`);
+            cardSeleccionada.classList.add('selected');
+            
+            // Actualizar resumen
+            actualizarResumen(idCurso);
+            
+            // Ir al paso 2
+            setTimeout(() => {
+                siguientePaso(2);
+            }, 500);
+        }
+
+        // Función para actualizar el resumen
+        function actualizarResumen(idCurso) {
+            const curso = cursos[idCurso];
+            
+            document.getElementById('nombre-curso-resumen').textContent = curso.nombre;
+            document.getElementById('subtotal').textContent = `s/ ${curso.precioOriginal}`;
+            document.getElementById('descuento').textContent = `- s/ ${curso.descuento}`;
+            document.getElementById('total').textContent = `s/ ${curso.precio}`;
+            document.getElementById('monto-yape').textContent = `s/ ${curso.precio}`;
+        }
+
+        // Función para ir al siguiente paso
+        function siguientePaso(paso) {
+            // Validar según el paso
+            if (paso === 2 && !cursoSeleccionado) {
+                alert('Por favor, selecciona un curso primero.');
+                return;
+            }
+            
+            if (paso === 3) {
+                // Validar formulario
+                const form = document.getElementById('formDatos');
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+            }
+            
+            // Ocultar todos los pasos
+            document.querySelectorAll('.paso-container').forEach(container => {
+                container.style.display = 'none';
+            });
+            
+            // Mostrar el paso actual
+            document.getElementById(`paso${paso}`).style.display = 'block';
+            
+            // Actualizar los indicadores de progreso
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.getElementById(`step${paso}`).classList.add('active');
+            
+            // Scroll hacia arriba
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Función para volver al paso anterior
+        function volverPaso(paso) {
+            siguientePaso(paso);
+        }
+
+        // Función para seleccionar método de pago
+        function seleccionarMetodo(metodo) {
+            // Remover selección previa
+            document.querySelectorAll('.metodo-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Ocultar todos los formularios
+            document.getElementById('form-tarjeta').style.display = 'none';
+            document.getElementById('form-yape').style.display = 'none';
+            
+            // Mostrar el formulario seleccionado
+            if (metodo === 'tarjeta') {
+                document.getElementById('form-tarjeta').style.display = 'block';
+                document.querySelectorAll('.metodo-card')[0].classList.add('selected');
+            } else if (metodo === 'yape') {
+                document.getElementById('form-yape').style.display = 'block';
+                document.querySelectorAll('.metodo-card')[1].classList.add('selected');
+            }
+            
+            // Scroll suave al formulario
+            setTimeout(() => {
+                const formVisible = metodo === 'tarjeta' ? 
+                    document.getElementById('form-tarjeta') : 
+                    document.getElementById('form-yape');
+                formVisible.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+
+        // Función para confirmar pago
+        function confirmarPago() {
+            // Mostrar modal de confirmación
+            const modal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+            modal.show();
+        }
+
+        // Event listener para cuando carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event listener para el formulario de tarjeta
+            const formTarjeta = document.querySelector('#form-tarjeta form');
+            if (formTarjeta) {
+                formTarjeta.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    confirmarPago();
+                });
+            }
+            
+            // Formatear número de tarjeta
+            const inputTarjeta = document.querySelector('#form-tarjeta input[maxlength="19"]');
+            if (inputTarjeta) {
+                inputTarjeta.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\s/g, '');
+                    let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+                    e.target.value = formattedValue;
+                });
+            }
+            
+            // Formatear fecha de vencimiento
+            const inputFecha = document.querySelector('#form-tarjeta input[placeholder="MM/AA"]');
+            if (inputFecha) {
+                inputFecha.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length >= 2) {
+                        value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                    }
+                    e.target.value = value;
+                });
+            }
+            
+            // Solo números en CVV
+            const inputCVV = document.querySelector('#form-tarjeta input[maxlength="3"]');
+            if (inputCVV) {
+                inputCVV.addEventListener('input', function(e) {
+                    e.target.value = e.target.value.replace(/\D/g, '');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
