@@ -1,25 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
-    // =========================
-    // Sistema de calificación
-    // =========================
-    function inicializarSistemaDeCalificacion(containerSelector, buttonsSelector, storageKey) {
+function inicializarSistemaDeCalificacion(containerSelector, buttonsSelector, storageKey) {
         const container = document.querySelector(containerSelector);
         if (!container) return;
-
-        const buttons = container.querySelectorAll(`${buttonsSelector} button`);
+        const buttons = container.querySelectorAll(`${buttonsSelector} .star`);
         const msg = container.querySelector('.rating-msg');
         if (!buttons.length || !msg) return;
-
         const savedRating = parseInt(localStorage.getItem(storageKey)) || 0;
 
         function highlightButtons(count) {
             buttons.forEach(button => {
-                const value = parseInt(button.dataset.value);
-                button.classList.toggle('active', value <= count);
+                const buttonValue = parseInt(button.dataset.value);
+                button.classList.toggle('active', buttonValue <= count);
             });
         }
-
         function getRatingMessage(value) {
             switch (value) {
                 case 1: return '¡Oh! Sentimos no haber cumplido tus expectativas.';
@@ -30,12 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 default: return '';
             }
         }
-
         if (savedRating > 0) {
             highlightButtons(savedRating);
             msg.textContent = getRatingMessage(savedRating);
         }
-
         buttons.forEach(button => {
             button.addEventListener('click', () => {
                 const value = parseInt(button.dataset.value);
@@ -46,211 +38,234 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const cursoId = document.body.dataset.courseId;
-    if (cursoId) {
-        inicializarSistemaDeCalificacion('.rating', '.stars', `curso-rating-${cursoId}`);
-        inicializarSistemaDeCalificacion('.teacher-widget', '.emojis', `docente-rating-${cursoId}`);
-    }
+    (function () {
+        const body = document.body;
+        const cursoIdUnico = body.dataset.courseId; 
 
-    // =========================
-    // Abrir / Cerrar módulos
-    // =========================
-    document.querySelectorAll('.unidad-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const targetId = header.dataset.bsTarget;
-            const collapseEl = document.querySelector(targetId);
-            if (!collapseEl) return;
-            new bootstrap.Collapse(collapseEl, { toggle: true });
+        if (cursoIdUnico) {
+            const cursoRatingKey = `curso-rating-${cursoIdUnico}`;
+            const docenteRatingKey = `docente-rating-${cursoIdUnico}`;
 
-            // Cambiar chevron
-            const chevron = header.querySelector('.chevron-icon');
-            if (chevron) {
-                chevron.classList.toggle('rotate-180', collapseEl.classList.contains('show'));
-            }
-        });
-    });
+            inicializarSistemaDeCalificacion('.rating', '.stars', cursoRatingKey);
+            inicializarSistemaDeCalificacion('.teacher-widget', '.emojis', docenteRatingKey);
+        } else {
+            console.warn('No se encontró "data-course-id" en el <body>. Las calificaciones no se guardarán por separado.');
+        }
+    })();
 
-    // =========================
-    // Modal de video
-    // =========================
-    const videoModalEl = document.getElementById('videoModal');
-    const youtubePlayer = document.getElementById('youtubePlayer');
-    if (videoModalEl && youtubePlayer) {
-        const bsModal = new bootstrap.Modal(videoModalEl);
 
-        document.querySelectorAll('.open-modal-video').forEach(button => {
-            button.addEventListener('click', e => {
-                e.preventDefault();
-                const videoId = button.dataset.videoId;
-                youtubePlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-                bsModal.show();
-            });
-        });
-
-        videoModalEl.addEventListener('hidden.bs.modal', () => {
-            youtubePlayer.src = '';
-        });
-    }
-
-    // =========================
-    // Progreso del curso
-    // =========================
-    const courseProgress = {
-        updateCourseState() {
-            const modules = document.querySelectorAll('.unidad-card');
-            let allPreviousComplete = true;
-
-            modules.forEach(module => {
-                const lessons = module.querySelectorAll('.lista-lecciones li');
-                let completedLessons = 0;
-
-                lessons.forEach(lesson => {
-                    const id = lesson.dataset.leccionId;
-                    if (localStorage.getItem(id) === 'true') {
-                        this.completeLesson(lesson, false);
-                        completedLessons++;
-                    }
-                });
-
-                if (module.classList.contains('is-locked') && allPreviousComplete) {
-                    this.unlockModule(module);
+    (function () {
+        const headers = document.querySelectorAll('.unidad-header');
+        headers.forEach(header => {
+            header.addEventListener('click', function() {
+                const card = this.closest('.unidad-card');
+                if (card.classList.contains('is-locked')) return;
+                const body = card.querySelector('.unidad-body');
+                card.classList.toggle('is-open');
+                if (card.classList.contains('is-open')) {
+                    body.style.display = 'block';
+                } else {
+                    body.style.display = 'none';
                 }
-
-                if (lessons.length && completedLessons < lessons.length) allPreviousComplete = false;
             });
+        });
+    })();
 
-            this.updateProgressCircle();
-            this.updateNextClassWidget();
-        },
+    (function () {
+        const modal = document.getElementById('videoModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const videoLinks = document.querySelectorAll('.open-modal-video');
+        const player = document.getElementById('youtubePlayer');
+        if (!modal || !closeModalBtn || !videoLinks.length || !player) return;
 
-        completeLesson(lesson, save = true) {
-            const icon = lesson.querySelector('.status-icon');
-            if (icon && !icon.classList.contains('completed')) {
-                icon.classList.remove('fa-regular', 'fa-circle-play', 'fa-lock');
-                icon.classList.add('fa-solid', 'fa-circle-check', 'completed');
-            }
-            if (save) {
-                const id = lesson.dataset.leccionId;
-                if (id) localStorage.setItem(id, 'true');
-                this.updateCourseState();
-            }
-        },
-
-        unlockModule(module) {
-            module.classList.remove('is-locked');
-            module.querySelectorAll('.status-icon').forEach(icon => {
-                icon.classList.remove('fa-lock');
-                icon.classList.add('fa-regular', 'fa-circle-play');
+        function openModal(videoId) {
+            player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            document.body.classList.add('modal-visible');
+        }
+        function closeModal() {
+            document.body.classList.remove('modal-visible');
+            player.src = '';
+        }
+        videoLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const videoId = this.dataset.videoId;
+                openModal(videoId);
             });
-        },
+        });
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+    })();
+    
+    const courseProgress = {};
+    
+    courseProgress.updateCourseState = function() {
+        const modulos = document.querySelectorAll('.unidad-card');
+        let allPreviousModulesComplete = true;
 
-        updateProgressCircle() {
-            const completed = document.querySelectorAll('.status-icon.completed').length;
-            const total = document.querySelectorAll('.lista-lecciones li').length;
-            const canvas = document.getElementById('progressCircle');
-            const pctText = document.getElementById('progressPercentage');
-            const summaryText = document.getElementById('progressSummary');
-            if (!canvas || !pctText || !summaryText) return;
+        modulos.forEach(modulo => {
+            const isLocked = modulo.classList.contains('is-locked');
+            if (isLocked && allPreviousModulesComplete) {
+                this.unlockModule(modulo);
+            }
+            let leccionesCompletas = 0;
+            const lecciones = modulo.querySelectorAll('.lista-lecciones li');
+            lecciones.forEach(leccion => {
+                const leccionId = leccion.dataset.leccionId;
+                if (localStorage.getItem(leccionId) === 'true') {
+                    this.completeLeccion(leccion, false);
+                    leccionesCompletas++;
+                }
+            });
+            if (lecciones.length > 0 && leccionesCompletas < lecciones.length) {
+                allPreviousModulesComplete = false;
+            }
+        });
+        this.updateProgressCircle();
+        this.updateNextClassWidget();
+    };
 
-            const pct = total ? Math.round((completed / total) * 100) : 0;
-            pctText.innerText = `${pct}%`;
+    courseProgress.completeLeccion = function(leccion, save = true) {
+        const leccionId = leccion.dataset.leccionId;
+        const icon = leccion.querySelector('.status-icon');
+        if (!icon.classList.contains('completed')) {
+            icon.classList.remove('fa-regular', 'fa-circle-play');
+            icon.classList.add('fa-solid', 'fa-circle-check', 'completed');
+        }
+        if (save && leccionId) {
+            localStorage.setItem(leccionId, 'true');
+            this.updateCourseState();
+        }
+    };
 
-            summaryText.innerText = pct === 100
-                ? '¡Felicidades, curso completado!'
-                : pct > 40
-                    ? 'Vas muy bien, sigue avanzando.'
-                    : '¡Sigue así para completar el curso!';
+    courseProgress.unlockModule = function(modulo) {
+        modulo.classList.remove('is-locked');
+        const mainIcon = modulo.querySelector('.lock-icon');
+        if (mainIcon) {
+            mainIcon.classList.remove('fa-solid', 'fa-lock', 'lock-icon');
+            mainIcon.classList.add('fa-solid', 'fa-chevron-down', 'chevron-icon');
+        }
+        modulo.querySelectorAll('.lista-lecciones .status-icon').forEach(icon => {
+            icon.classList.remove('fa-solid', 'fa-lock');
+            icon.classList.add('fa-regular', 'fa-circle-play');
+        });
+    };
 
-            const ctx = canvas.getContext('2d');
-            const center = canvas.width / 2;
-            const radius = 50;
-            const lineWidth = 10;
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // fondo
+    courseProgress.updateProgressCircle = function() {
+        const clasesCompletadas = document.querySelectorAll('.lista-lecciones .status-icon.completed').length;
+        const totalClases = document.querySelectorAll('.lista-lecciones li').length;
+        const canvas = document.getElementById('progressCircle');
+        const progressPercentageText = document.getElementById('progressPercentage');
+        const progressSummaryText = document.getElementById('progressSummary');
+        if (!canvas || !progressPercentageText || !progressSummaryText) return;
+        const ctx = canvas.getContext('2d');
+        let percentage = 0;
+        if (totalClases > 0) {
+            percentage = Math.round((clasesCompletadas / totalClases) * 100);
+        }
+        progressPercentageText.innerText = `${percentage}%`;
+        if (percentage === 100) {
+            progressSummaryText.innerText = '¡Felicidades, curso completado!';
+        } else if (percentage > 40) {
+            progressSummaryText.innerText = 'Vas muy bien, sigue avanzando.';
+        } else {
+            progressSummaryText.innerText = '¡Sigue así para completar el curso!';
+        }
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const radius = 50;
+        const lineWidth = 10;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.lineWidth = lineWidth;
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.stroke();
+        if (percentage > 0) {
             ctx.beginPath();
-            ctx.arc(center, center, radius, 0, 2 * Math.PI);
+            ctx.arc(centerX, centerY, radius, -Math.PI / 2, (percentage / 100) * 2 * Math.PI - Math.PI / 2);
             ctx.lineWidth = lineWidth;
-            ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+            ctx.strokeStyle = '#00e27f';
+            ctx.lineCap = 'round';
             ctx.stroke();
+        }
+    };
 
-            // progreso
-            if (pct) {
-                ctx.beginPath();
-                ctx.arc(center, center, radius, -Math.PI / 2, (pct / 100) * 2 * Math.PI - Math.PI / 2);
-                ctx.lineWidth = lineWidth;
-                ctx.strokeStyle = '#00e27f';
-                ctx.lineCap = 'round';
-                ctx.stroke();
-            }
-        },
-
-        setupLessonListeners() {
-            document.querySelectorAll('.lista-lecciones li').forEach(lesson => {
-                const link = lesson.querySelector('a, label');
-                if (!link) return;
-                link.addEventListener('click', e => {
-                    const module = lesson.closest('.unidad-card');
-                    if (module?.classList.contains('is-locked')) e.preventDefault();
-                    else this.completeLesson(lesson);
+    courseProgress.setupLeccionListeners = function() {
+        const lecciones = document.querySelectorAll('.lista-lecciones li');
+        lecciones.forEach(leccion => {
+            const link = leccion.querySelector('a, label');
+            if (link) {
+                link.addEventListener('click', (e) => {
+                    const modulo = leccion.closest('.unidad-card');
+                    if (modulo.classList.contains('is-locked')) {
+                        e.preventDefault();
+                        return;
+                    }
+                    this.completeLeccion(leccion);
                 });
-            });
-        },
-
-        updateNextClassWidget() {
-            const all = document.querySelectorAll('.lista-lecciones li');
-            const completed = document.querySelectorAll('.status-icon.completed');
-            const nextText = document.getElementById('nextClassName');
-            const nextBtn = document.getElementById('nextClassButton');
-            if (!all.length || !nextText || !nextBtn) return;
-
-            const nextIndex = completed.length;
-
-            if (nextIndex < all.length) {
-                const nextLesson = all[nextIndex];
-                const lessonLink = nextLesson.querySelector('a, label');
-                nextText.textContent = lessonLink?.textContent.trim() || 'Siguiente Lección';
-                nextBtn.innerHTML = 'Empezar Ahora <i class="fa-solid fa-arrow-right"></i>';
-                nextBtn.disabled = false;
-                nextBtn.dataset.nextLessonId = nextLesson.dataset.leccionId;
-            } else {
-                nextText.textContent = '¡Felicidades! Has terminado el curso.';
-                nextBtn.innerHTML = 'Curso Completado <i class="fa-solid fa-check"></i>';
-                nextBtn.disabled = true;
-                nextBtn.dataset.nextLessonId = '';
-                this.enableCertificate();
             }
-        },
+        });
+    };
+    
+    courseProgress.updateNextClassWidget = function() {
+        const allLessons = document.querySelectorAll('.lista-lecciones li');
+        const completedLessons = document.querySelectorAll('.lista-lecciones .status-icon.completed');
+        const nextClassText = document.getElementById('nextClassName');
+        const nextClassButton = document.getElementById('nextClassButton');
+        if (!allLessons.length || !nextClassText || !nextClassButton) return;
+        const nextLessonIndex = completedLessons.length;
+        if (nextLessonIndex < allLessons.length) {
+            const nextLessonElement = allLessons[nextLessonIndex];
+            const lessonLink = nextLessonElement.querySelector('a, label');
+            const lessonText = lessonLink ? lessonLink.textContent.trim() : 'Siguiente Lección';
+            nextClassText.textContent = lessonText;
+            nextClassButton.innerHTML = 'Empezar Ahora <i class="fa-solid fa-arrow-right"></i>';
+            nextClassButton.disabled = false;
+            nextClassButton.dataset.nextLessonId = nextLessonElement.dataset.leccionId;
+        } else {
+            nextClassText.textContent = '¡Felicidades! Has terminado el curso.';
+            nextClassButton.innerHTML = 'Curso Completado <i class="fa-solid fa-check"></i>';
+            nextClassButton.disabled = true;
+            nextClassButton.dataset.nextLessonId = '';
+            this.enableCertificate();
+        }
+    };
 
-        setupNextClassButton() {
-            const btn = document.getElementById('nextClassButton');
-            if (!btn) return;
-
-            btn.addEventListener('click', () => {
-                const nextId = btn.dataset.nextLessonId;
-                if (!nextId) return;
-                const nextLesson = document.querySelector(`li[data-leccion-id="${nextId}"]`);
-                if (!nextLesson) return;
-                const module = nextLesson.closest('.unidad-card');
-                module?.querySelector('.unidad-header').click();
-                module?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            });
-        },
-
-        enableCertificate() {
-            const msg = document.getElementById('certificateMessage');
-            const btn = document.getElementById('certificateButton');
-            if (msg) msg.textContent = '¡Felicidades! Ya puedes descargar tu diploma.';
-            if (btn) {
-                btn.textContent = 'Descargar Certificado';
-                btn.classList.remove('disabled');
+    courseProgress.setupNextClassButton = function() {
+        const nextClassButton = document.getElementById('nextClassButton');
+        if (!nextClassButton) return;
+        nextClassButton.addEventListener('click', () => {
+            const nextLessonId = nextClassButton.dataset.nextLessonId;
+            if (!nextLessonId) return;
+            const nextLessonElement = document.querySelector(`li[data-leccion-id="${nextLessonId}"]`);
+            if (!nextLessonElement) return;
+            const parentModule = nextLessonElement.closest('.unidad-card');
+            if (parentModule) {
+                parentModule.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (!parentModule.classList.contains('is-open')) {
+                    parentModule.querySelector('.unidad-header').click();
+                }
             }
+        });
+    };
+    
+    courseProgress.enableCertificate = function() {
+        const message = document.getElementById('certificateMessage');
+        const button = document.getElementById('certificateButton');
+        if (message) {
+            message.textContent = '¡Felicidades! Ya puedes descargar tu diploma.';
+        }
+        if (button) {
+            button.textContent = 'Descargar Certificado';
+            button.classList.remove('disabled');
         }
     };
 
     courseProgress.updateCourseState();
-    courseProgress.setupLessonListeners();
+    courseProgress.setupLeccionListeners();
     courseProgress.setupNextClassButton();
-
+    
 });

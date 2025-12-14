@@ -6,293 +6,400 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Python Divertido</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Andiru/css/base.css">
+    <link rel="stylesheet" href="../../Andiru/css/layout.css">
+    <link rel="stylesheet" href="../../Andiru/css/navigation.css">
+    <link rel="stylesheet" href="../../Andiru/css/course-content.css">
+    <link rel="stylesheet" href="../../Andiru/css/widgets.css">
+    <link rel="stylesheet" href="../../Andiru/css/components.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/Andiru/css/base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body data-course-id="web">
 
-    <!-- SIDEBAR -->
-    <nav class="sidebar d-flex flex-column bg-dark">
-        <div class="sidebar-header d-flex align-items-center gap-3 p-3">
-            <i class="fa-solid fa-graduation-cap logo-icon text-success"></i>
-            <span class="logo-text fw-semibold text-white">Global Learn</span>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <span class="logo-text">Global Learn</span>
         </div>
-        <ul class="nav-links list-unstyled d-flex flex-column gap-2 flex-grow-1">
-            <li><a href="/Rafael/Html/dashboard.html" class="d-flex align-items-center gap-3 p-2 text-decoration-none text-muted"><i
-                        class="fa-solid fa-house"></i><span>Inicio</span></a></li>
-            <li><a href="/Adrian/Html/ventana_de_clases.html" class="d-flex align-items-center gap-3 p-2 text-decoration-none text-muted"><i
-                        class="fa-solid fa-comments"></i><span>Comentarios</span></a></li>
-            <li><a href="/Rafael/Html/ventana_de_ruta.html" class="d-flex align-items-center gap-3 p-2 text-decoration-none text-success border-start border-3 border-success"><i
-                        class="fa-solid fa-route"></i><span>Mis Rutas</span></a></li>
-            <li><a href="/Adrian/Html/Notas_y_asistencias.html" class="d-flex align-items-center gap-3 p-2 text-decoration-none text-muted"><i
-                        class="fa-solid fa-chart-line"></i><span>Mi Asistencia</span></a></li>
-            <li><a href="/Gema/Html/Certificado - Examen.html" class="d-flex align-items-center gap-3 p-2 text-decoration-none text-muted"><i
-                        class="fa-solid fa-award"></i><span>Certificados</span></a></li>
-            <li><a href="#" class="d-flex align-items-center gap-3 p-2 text-decoration-none text-muted"><i
-                        class="fa-solid fa-bell"></i><span>Notificaciones</span></a></li>
+        <ul class="nav-links">
+            <li><a href="../../Rafael/Html/dashboard.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+            <li><a href="../../Adrian/Html/ventana_de_clases.html"><i class="fa-solid fa-comments"></i><span>Comentarios</span></a></li>
+            <li><a href="../../Rafael/Html/ventana_de_ruta.html" class="active"><i class="fa-solid fa-route"></i><span>Mis Rutas</span></a></li>
+            <li><a href="../../Adrian/Html/Notas_y_asistencias.html"><i class="fa-solid fa-chart-line"></i><span>Mi Asistencia</span></a></li>
+            <li><a href="../../Gema/Html/Certificado - Examen.html"><i class="fa-solid fa-award"></i><span>Certificados</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-bell"></i><span>Notificaciones</span></a></li>
         </ul>
-        <div class="sidebar-footer d-flex align-items-center gap-3 p-3 border-top mt-auto">
-            <img src="https://i.pravatar.cc/40" alt="Avatar de usuario" class="rounded-circle">
-            <div class="user-info d-flex flex-column">
-                <span class="user-name fw-semibold text-white">Usuario</span>
-                <span class="user-role text-muted" style="font-size: 12px;">Estudiante</span>
+        <div class="sidebar-footer">
+            <img src="https://i.pravatar.cc/40" alt="Avatar de usuario">
+            <div class="user-info">
+                <span class="user-name">Usuario</span>
+                <span class="user-role">Estudiante</span>
             </div>
         </div>
     </nav>
-  
-    <div class="page-wrapper d-flex flex-column" style="margin-left: 240px; min-height: 100vh;">
 
-    <!-- CONTENEDOR FLEX PARA MAIN + ASIDE -->
-    <div class="d-flex">
-        <!-- MAIN -->
-        <main class="flex-grow-1 p-4">
+    <div class="content-container">
 
-            <!-- BUSCADOR -->
-            <div class="search-box mb-4 d-flex align-items-center gap-2">
+        <main>
+            <div class="search-box">
                 <i class="fa fa-search"></i>
-                <input type="text" id="searchInput" class="form-control" placeholder="Buscar en el curso...">
+                <input type="text" id="searchInput" placeholder="Buscar en el curso...">
             </div>
 
-            <h1 class="mb-2">Crea tu Página Web</h1>
-            <p class="descripcion mb-4">¡Aprende a construir tus propias páginas web desde cero! Descubre cómo
-                funcionan HTML y CSS para darle vida a tus ideas en internet.</p>
+            <h1>Crea tu Página Web</h1>
+            <p class="descripcion">
+                ¡Aprende a construir tus propias páginas web desde cero! Descubre cómo funcionan HTML y CSS para darle
+                vida a tus ideas en internet.
+            </p>
 
-            <!-- CALIFICACIÓN DEL CURSO -->
-            <div class="rating mb-4">
+            <div class="rating">
                 <p>Califica este curso:</p>
-                <div class="stars d-flex gap-1">
-                    <button class="star btn btn-link p-0" data-value="1"><i class="fa-solid fa-star"></i></button>
-                    <button class="star btn btn-link p-0" data-value="2"><i class="fa-solid fa-star"></i></button>
-                    <button class="star btn btn-link p-0" data-value="3"><i class="fa-solid fa-star"></i></button>
-                    <button class="star btn btn-link p-0" data-value="4"><i class="fa-solid fa-star"></i></button>
-                    <button class="star btn btn-link p-0" data-value="5"><i class="fa-solid fa-star"></i></button>
+                <div class="stars">
+                    <button class="star" data-value="1"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="2"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="3"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="4"><i class="fa-solid fa-star"></i></button>
+                    <button class="star" data-value="5"><i class="fa-solid fa-star"></i></button>
                 </div>
-                <div class="rating-msg mt-2"></div>
+                <div id="ratingMsg" class="rating-msg"></div>
             </div>
 
-            <!-- CONTENIDO DEL CURSO -->
-            <h2 class="mb-3">Contenido del Curso</h2>
-            <section class="unidades-curso d-flex flex-column gap-3">
+            <h2>Contenido del Curso</h2>
 
-                <!-- MÓDULO 1 -->
-                <div class="unidad-card card text-white bg-dark">
-                    <div class="unidad-header d-flex justify-content-between align-items-center p-3"
-                        data-bs-toggle="collapse" data-bs-target="#modulo1Body" aria-expanded="true" aria-controls="modulo1Body">
+            <section class="unidades-curso">
+
+                <div class="unidad-card">
+                    <div class="unidad-header">
                         <div class="unidad-info">
-                            <span class="unidad-numero fw-bold">Módulo 1</span>
-                            <h3 class="unidad-titulo mb-0">¿Cómo funciona Internet?</h3>
+                            <span class="unidad-numero">Módulo 1</span>
+                            <h3 class="unidad-titulo">¿Cómo funciona Internet?</h3>
                         </div>
                         <i class="fa-solid fa-chevron-down chevron-icon"></i>
                     </div>
-                    <div id="modulo1Body" class="unidad-body collapse show">
-                        <ul class="lista-lecciones list-unstyled p-3 mb-0">
-                            <li class="d-flex align-items-center gap-2">
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="web_m1_l1">
                                 <i class="fa-regular fa-circle-play status-icon"></i>
-                                <a href="#" class="open-modal-video text-decoration-none text-white" data-video-id="qJxbC9PJSrA">Viajando por la Web: ¿Qué es una página web? (Video)</a>
+                                <a href="#" class="open-modal-video" data-video-id="qJxbC9PJSrA">
+                                    Viajando por la Web: ¿Qué es una página web? (Video)
+                                </a>
                             </li>
-                            <li class="d-flex align-items-center gap-2">
+                            <li data-leccion-id="web_m1_l2">
                                 <i class="fa-regular fa-circle-play status-icon"></i>
-                                <a href="#" target="_blank" class="text-decoration-none text-white">Herramientas del Desarrollador Web (Guía)</a>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing"
+                                    target="_blank">Herramientas del Desarrollador Web (Guía)</a>
                             </li>
-                            <li class="d-flex align-items-center gap-2">
+                            <li data-leccion-id="web_m1_l3">
                                 <i class="fa-regular fa-circle-play status-icon"></i>
-                                <label for="entrega_m1_l3" class="upload-link text-white">Tarea: Explora el código de tus páginas favoritas</label>
+                                <label for="entrega_m1_l3" class="upload-link">
+                                    Tarea: Explora el código de tus páginas favoritas
+                                </label>
                                 <input type="file" id="entrega_m1_l3" class="hidden-file-input">
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- MÓDULOS 2 a 6 (mismo patrón) -->
-                <!-- Para ahorrar espacio, solo se repite la estructura: cambia el id, título y contenido -->
-                <div class="unidad-card card text-white bg-dark">
-                    <div class="unidad-header d-flex justify-content-between align-items-center p-3" data-bs-toggle="collapse" data-bs-target="#modulo2Body" aria-expanded="false" aria-controls="modulo2Body">
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
                         <div class="unidad-info">
-                            <span class="unidad-numero fw-bold">Módulo 2</span>
-                            <h3 class="unidad-titulo mb-0">HTML: El Esqueleto de tu Página</h3>
+                            <span class="unidad-numero">Módulo 2</span>
+                            <h3 class="unidad-titulo">HTML: El Esqueleto de tu Página</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        <i class="fa-solid fa-lock lock-icon"></i>
                     </div>
-                    <div id="modulo2Body" class="unidad-body collapse">
-                        <ul class="lista-lecciones list-unstyled p-3 mb-0">
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Etiquetas HTML: Títulos, Párrafos e Imágenes (Video)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Creando Enlaces y Listas (PPT)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><label for="entrega_m2_l3" class="upload-link text-white">Tarea: Crea tu primera página HTML sobre ti</label><input type="file" id="entrega_m2_l3" class="hidden-file-input"></li>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="web_m2_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="mwtkPVR9MgU">
+                                    Etiquetas HTML: Títulos, Párrafos e Imágenes (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="web_m2_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing"
+                                    target="_blank">Creando Enlaces y Listas (PPT)</a>
+                            </li>
+                            <li data-leccion-id="web_m2_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m2_l3" class="upload-link">
+                                    Tarea: Crea tu primera página HTML sobre ti
+                                </label>
+                                <input type="file" id="entrega_m2_l3" class="hidden-file-input">
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Módulo 3 -->
-                <div class="unidad-card card text-white bg-dark">
-                    <div class="unidad-header d-flex justify-content-between align-items-center p-3" data-bs-toggle="collapse" data-bs-target="#modulo3Body" aria-expanded="false" aria-controls="modulo3Body">
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
                         <div class="unidad-info">
-                            <span class="unidad-numero fw-bold">Módulo 3</span>
-                            <h3 class="unidad-titulo mb-0">CSS: ¡Dándole Estilo a tu Página!</h3>
+                            <span class="unidad-numero">Módulo 3</span>
+                            <h3 class="unidad-titulo">CSS: ¡Dándole Estilo a tu Página!</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        <i class="fa-solid fa-lock lock-icon"></i>
                     </div>
-                    <div id="modulo3Body" class="unidad-body collapse">
-                        <ul class="lista-lecciones list-unstyled p-3 mb-0">
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Introducción a CSS: Colores y Fuentes (Video)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Selectores CSS: Eligiendo qué estilizar (PPT)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><label for="entrega_m3_l3" class="upload-link text-white">Tarea: Ponle colores y estilo a tu página personal</label><input type="file" id="entrega_m3_l3" class="hidden-file-input"></li>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="web_m3_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="4CC1wxHQQ5k">
+                                    Introducción a CSS: Colores y Fuentes (Video)
+                                </a>
+                            </li>
+                            <li data-leccion-id="web_m3_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing"
+                                    target="_blank">Selectores CSS: Eligiendo qué estilizar (PPT)</a>
+                            </li>
+                            <li data-leccion-id="web_m3_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m3_l3" class="upload-link">
+                                    Tarea: Ponle colores y estilo a tu página personal
+                                </label>
+                                <input type="file" id="entrega_m3_l3" class="hidden-file-input">
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Módulo 4 -->
-                <div class="unidad-card card text-white bg-dark">
-                    <div class="unidad-header d-flex justify-content-between align-items-center p-3" data-bs-toggle="collapse" data-bs-target="#modulo4Body" aria-expanded="false" aria-controls="modulo4Body">
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
                         <div class="unidad-info">
-                            <span class="unidad-numero fw-bold">Módulo 4</span>
-                            <h3 class="unidad-titulo mb-0">CSS: Organizando el Contenido</h3>
+                            <span class="unidad-numero">Módulo 4</span>
+                            <h3 class="unidad-titulo">CSS: Organizando el Contenido</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        <i class="fa-solid fa-lock lock-icon"></i>
                     </div>
-                    <div id="modulo4Body" class="unidad-body collapse">
-                        <ul class="lista-lecciones list-unstyled p-3 mb-0">
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">El Modelo de Caja: Padding, Border, Margin (Video)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Display: Block, Inline y Flexbox Básico (PPT)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><label for="entrega_m4_l3" class="upload-link text-white">Tarea: Crea una galería de imágenes simple</label><input type="file" id="entrega_m4_l3" class="hidden-file-input"></li>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="web_m4_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="-ivUAB-aG2U">El Modelo de Caja:
+                                    Padding, Border, Margin (Video)</a>
+                            </li>
+                            <li data-leccion-id="web_m4_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing"
+                                    target="_blank">Display: Block, Inline y Flexbox Básico (PPT)</a>
+                            </li>
+                            <li data-leccion-id="web_m4_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m4_l3" class="upload-link">Tarea: Crea una galería de imágenes
+                                    simple</label>
+                                <input type="file" id="entrega_m4_l3" class="hidden-file-input">
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Módulo 5 -->
-                <div class="unidad-card card text-white bg-dark">
-                    <div class="unidad-header d-flex justify-content-between align-items-center p-3" data-bs-toggle="collapse" data-bs-target="#modulo5Body" aria-expanded="false" aria-controls="modulo5Body">
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
                         <div class="unidad-info">
-                            <span class="unidad-numero fw-bold">Módulo 5</span>
-                            <h3 class="unidad-titulo mb-0">¡Tu Página en Internet!</h3>
+                            <span class="unidad-numero">Módulo 5</span>
+                            <h3 class="unidad-titulo">¡Tu Página en Internet!</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        <i class="fa-solid fa-lock lock-icon"></i>
                     </div>
-                    <div id="modulo5Body" class="unidad-body collapse">
-                        <ul class="lista-lecciones list-unstyled p-3 mb-0">
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">¿Qué es el Hosting y un Dominio? (Video)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Publicando Gratis con GitHub Pages (Guía)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><label for="entrega_m5_l3" class="upload-link text-white">Tarea: ¡Publica tu página personal!</label><input type="file" id="entrega_m5_l3" class="hidden-file-input"></li>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="web_m5_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="l6kdgO09G0I">¿Qué es el Hosting y
+                                    un Dominio? (Video)</a>
+                            </li>
+                            <li data-leccion-id="web_m5_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing"
+                                    target="_blank">Publicando Gratis con GitHub Pages (Guía)</a>
+                            </li>
+                            <li data-leccion-id="web_m5_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m5_l3" class="upload-link">Tarea: ¡Publica tu página
+                                    personal!</label>
+                                <input type="file" id="entrega_m5_l3" class="hidden-file-input">
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Módulo 6 -->
-                <div class="unidad-card card text-white bg-dark">
-                    <div class="unidad-header d-flex justify-content-between align-items-center p-3" data-bs-toggle="collapse" data-bs-target="#modulo6Body" aria-expanded="false" aria-controls="modulo6Body">
+                <div class="unidad-card is-locked">
+                    <div class="unidad-header">
                         <div class="unidad-info">
-                            <span class="unidad-numero fw-bold">Módulo 6</span>
-                            <h3 class="unidad-titulo mb-0">Proyecto Final: Tu Sitio Web Temático</h3>
+                            <span class="unidad-numero">Módulo 6</span>
+                            <h3 class="unidad-titulo">Proyecto Final: Tu Sitio Web Temático</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        <i class="fa-solid fa-lock lock-icon"></i>
                     </div>
-                    <div id="modulo6Body" class="unidad-body collapse">
-                        <ul class="lista-lecciones list-unstyled p-3 mb-0">
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Planificando tu Sitio Web (Video)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Consejos de Diseño y Estructura (PPT)</a></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><label for="entrega_m6_l3" class="upload-link text-white">Entrega: Tu Sitio Web Terminado</label><input type="file" id="entrega_m6_l3" class="hidden-file-input"></li>
-                            <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-lock status-icon"></i><a href="#" class="text-decoration-none text-white">Examen Final</a></li>
+                    <div class="unidad-body" style="display: none;">
+                        <ul class="lista-lecciones">
+                            <li data-leccion-id="web_m6_l1">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="#" class="open-modal-video" data-video-id="uCq7XP9CNag">Planificando tu Sitio
+                                    Web (Video)</a>
+                            </li>
+                            <li data-leccion-id="web_m6_l2">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="https://docs.google.com/presentation/d/1ScI_tnEkBo3SYb6ESFV2D7Gexw_sqE_vvxHq37_HSIA/edit?usp=sharing"
+                                    target="_blank">Consejos de Diseño y Estructura (PPT)</a>
+                            </li>
+                            <li data-leccion-id="web_m6_l3">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <label for="entrega_m6_l3" class="upload-link">Entrega: Tu Sitio Web Terminado</label>
+                                <input type="file" id="entrega_m6_l3" class="hidden-file-input">
+                            </li>
+                            <li data-leccion-id="web_m6_l4">
+                                <i class="fa-solid fa-lock status-icon"></i>
+                                <a href="/Gema/Html/Crea tu Página Web.html" class="examen-link">
+                                    Examen Final
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-
             </section>
         </main>
 
-        <!-- ASIDE -->
-        <aside class="d-flex flex-column gap-3 p-4" style="width: 300px;">
-            <div class="card bg-dark text-white">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Siguiente Clase</h5>
-                    <p id="nextClassName">Cargando...</p>
-                    <button id="nextClassButton" class="btn btn-success w-100">Empezar Ahora <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
 
-            <div class="card bg-dark text-white">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Progreso del Curso</h5>
-                    <div class="position-relative d-inline-block my-3">
-                        <canvas id="progressCircle" width="120" height="120"></canvas>
-                        <div class="position-absolute top-50 start-50 translate-middle">
-                            <span id="progressPercentage">0%</span>
-                        </div>
-                    </div>
-                    <p id="progressSummary" class="text-white-50">¡Sigue así para completar el curso!</p>
-                </div>
-            </div>
-
-            <div class="card bg-dark text-white">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Tu Certificado</h5>
-                    <p id="certificateMessage" class="text-white-50">¡Completa todas las clases y el examen final para obtener tu diploma!</p>
-                    <a href="#" id="certificateButton" class="btn btn-success w-100 disabled" target="_blank">Sacar Certificado</a>
-                </div>
-            </div>
-        </aside>
-    </div>
-
-        <!-- FOOTER -->
-        <footer class="footer bg-dark text-white mt-auto pt-4">
-            <div class="container">
-                <div class="row footer-content">
-                    <div class="col-md-4 mb-4 contact-info">
-                        <h4 class="mb-3">Contacto</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Av. Principal 123, Lima, Perú</li>
-                            <li class="mb-2"><i class="fa-solid fa-phone me-2"></i>+51 987 654 321</li>
-                            <li><i class="fa-solid fa-envelope me-2"></i><a href="mailto:soporte@globallearn.com" class="text-white text-decoration-none">soporte@globallearn.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 mb-4 about-info">
-                        <h4 class="mb-3">Sobre Global Learn</h4>
-                        <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para todos los niños.</p>
-                        <div class="social-links d-flex gap-3 mt-2">
-                            <a href="#" aria-label="Facebook" class="text-white fs-5"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Twitter" class="text-white fs-5"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" aria-label="Instagram" class="text-white fs-5"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" aria-label="LinkedIn" class="text-white fs-5"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4 quick-links">
-                        <h4 class="mb-3">Enlaces Rápidos</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Cursos</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Acerca de</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom bg-secondary text-center py-3 mt-3">
-                <p class="mb-0">&copy; 2025 Global Learn. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-
-        <!-- MODAL DE VIDEO -->
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content bg-dark text-white">
-                    <div class="modal-header border-0">
-                        <h5 class="modal-title" id="videoModalLabel">Reproduciendo Video</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body p-0">
-                        <div class="ratio ratio-16x9">
-                            <iframe id="youtubePlayer" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
+        <div id="videoModal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="modal-close" id="closeModalBtn">&times;</span>
+                <div class="video-container">
+                    <iframe id="youtubePlayer" width="560" height="315" src="" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
 
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Andiru/js/script.js"></script>
+        <aside>
+            <div class="teacher-widget card">
+                <div class="widget-content">
+                    <div class="teacher-header">
+
+                        <img src="https://fotos.perfil.com/2025/03/03/trim/987/555/BC-xi-se-alista-a-presentar-plan-de-estimulo-chino-entre-creciente-guerra-comercial-05.jpg"
+                            alt="Foto del instructor" class="teacher-avatar">
+                        <div class="teacher-intro">
+                            <h4 class="teacher-name">Rafael Quispe</h4>
+                            <p class="teacher-title">Instructor Principal</p>
+                        </div>
+                    </div>
+                    <div class="teacher-body">
+                        <p class="teacher-description">
+                            Crear sitios web va más allá de solo escribir código. 
+                            Se trata de construir experiencias interactivas y funcionales para el usuario, 
+                            combinando creatividad con lógica para dar vida a ideas en la pantalla.
+                        </p>
+                        <ul class="teacher-contact">
+                            <li><i class="fa-solid fa-clock"></i> <span><strong>Atención:</strong> L-V, 9am - 5pm</span>
+                            </li>
+                            <li><i class="fa-solid fa-phone"></i> <span>+51 987 684 123</span></li>
+                            <li><i class="fa-solid fa-envelope"></i> <span>prof.paolo@g-learn.com</span></li>
+                            <li><i class="fa-solid fa-video"></i><a href="https://zoom.us/j/TU-ID-DE-REUNION"
+                                    target="_blank">Clase en Vivo (Zoom)</a></li>
+                        </ul>
+                    </div>
+                    <div class="teacher-footer">
+                        <p>Califica al instructor:</p>
+                        <div class="emojis teacher-rating">
+                            <button class="star" data-value="1"><i
+                                    class="fa-solid fa-face-frown-open face-1"></i></button>
+                            <button class="star" data-value="2"><i class="fa-solid fa-face-frown face-2"></i></button>
+                            <button class="star" data-value="3"><i class="fa-solid fa-face-meh face-3"></i></button>
+                            <button class="star" data-value="4"><i class="fa-solid fa-face-smile face-4"></i></button>
+                            <button class="star" data-value="5"><i
+                                    class="fa-solid fa-face-laugh-beam face-5"></i></button>
+                        </div>
+                        <div id="teacherRatingMsg" class="rating-msg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-class-widget card">
+                <div class="widget-content">
+                    <h4>Siguiente Clase</h4>
+                    <p id="nextClassName">Cargando...</p> <button id="nextClassButton" class="btn-primary full-width">
+                        Empezar Ahora <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="progress-circle-widget card">
+                <div class="widget-content">
+                    <h3>Progreso del Curso</h3>
+                    <div class="circle-wrap">
+                        <canvas id="progressCircle" width="120" height="120"></canvas>
+                        <div class="progress-text-overlay">
+                            <span id="progressPercentage">0%</span>
+                        </div>
+                    </div>
+                    <p id="progressSummary" class="progress-summary">¡Sigue así para completar el curso!</p>
+                </div>
+            </div>
+
+            <div class="widget card">
+                <div class="widget-content">
+                    <h3>Tu Certificado</h3>
+                    <p id="certificateMessage">¡Completa todas las clases y el examen final para obtener tu diploma!</p>
+
+                    <a href="https://docs.google.com/document/d/1WrBzYEwaZKX7UWwCvv9BeyxCdJkF9I1xgpY3E7cKXo4/edit?usp=sharing"
+                        id="certificateButton" class="btn-primary disabled" target="_blank">
+                        Sacar Certificado
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+
+        <footer class="page-footer">
+            <div class="footer-content">
+
+                <div class="footer-column contact-info">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Av. Principal 123, Lima, Perú</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+51 987 654 321</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:soporte@globallearn.com">soporte@globallearn.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column about-info">
+                    <h4>Sobre Global Learn</h4>
+                    <p>Nuestra misión es hacer que el aprendizaje de tecnología e idiomas sea divertido y accesible para
+                        todos los niños.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Global Learn. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+
+        <script src="/Andiru/js/script.js"></script>
+
 </body>
 
 </html>
